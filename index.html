@@ -1,0 +1,2307 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/eruda.min.js"></script><style type="text/css">.eruda-search-highlight-block{display:inline}.eruda-search-highlight-block .eruda-keyword{background:#fffbe5;color:#5c5c00}</style>
+<script>
+    eruda.init({
+        tool: ['console', 'elements', 'network', 'resources', 'info']
+    });
+    eruda.get().config.set('displaySize', 60);
+    eruda.remove('settings');
+    eruda.util.evalCss.setTheme('Light');
+</script><style type="text/css">@font-face{font-family:eruda-icon;src:url('data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAA6UAAsAAAAAGvAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAARoAAAHeLjoycE9TLzIAAAIkAAAAPwAAAFZWm1KoY21hcAAAAmQAAAFdAAADwhPu1O9nbHlmAAADxAAAB+wAAA9I7RPQpGhlYWQAAAuwAAAAMQAAADZ26MSyaGhlYQAAC+QAAAAdAAAAJAgEBC9obXR4AAAMBAAAAB0AAACwXAv//GxvY2EAAAwkAAAAOwAAAFpuVmoybWF4cAAADGAAAAAfAAAAIAE9AQ1uYW1lAAAMgAAAASkAAAIWm5e+CnBvc3QAAA2sAAAA5QAAAU4VMmUJeJxNkD1Ow0AQhb9NHGISCH9RiB0cErCNHRrqFFSIyqKiQHSpEFJERUnBCTgPZ+AEHIe34wDe1f69efPezOKAHldc07q5re4ZrFevL8QE1MPHm3e3fn5aEf6+FAvsDHHuTUoxd7zzwSdffLulq9wjLbaYau8TacZMONE554xzZsrtNfBEzFOhbSmOyTmga0ikvRR/37RSsSMyDukYPjWdgGOtsSK55Y/k0Bf/ksK0MrbFr70idsVZKNPnDcSay3umd2TISCvWTJSxI78lFQ/C+qbv/Zo9tNXDP55ZL7k0Q90u5F5XX0qrYx16btccCtXg/ULrKzGFuqY9rUTMhf3fkCNj+MxUnsM/frr5Qx+ZbH4vVQ0F5Q/ZQBvxAAB4nGNgZJJgnMDAysDA1Mt0hoGBoR9CM75mMGLkAIoysDIzYAUBaa4pDAcYdD+KsIC4MSxMDIxAGoQZALgnCOUAeJy1011SGlEQhuF3BFHxD5UUyr8gIJIsiiKJsSqJlrHKsJssKFeuxF6Bfj3dF96aqhzqoZnDzJyG8w2wCVTko1SheKLAx1/NFuV8hXo5X+WPjht6+fmfWHLDHQ+srfnykjMrvnPPoxXlzNtRlFc26HLBZblal1N9ntBnwIgx5/SYMaWt78+YM6TDgitduaEVq+q0xhbb7KifPQ441N2OOOaEJh9oaYka7xvdd57vQz1P+oPR+Bx6s2lbrc6H0Flc/cO9/sfY87fiOY8u8X0J/muX6VRW6UI+p4l8SX35mgZynUbyLY3lJukf0e6HnvxIM/mZpnKb2nKXvM/7dCa/0lwe0lAeU0d+p4Wsk3bBiuDptY2A10rw9Fo1eOJtM/iTYLWA162A1+2A152A13rwJ8R2g++AJaUU2w/KK3YQlFzsMCjDWCMozdhRUK6x46CEYydBWceagdYraihRngAAAHic7RdbbBxX9Z57Z2d2d2ZndryzM7ve9ax3NztjO/bann0lTuW16zoBJSWJ7Zg83NiUJCQ1Ik2ikKQJNC9FFQqVEG0RVLQoSpEKH2klqgpEIyWAUMRTNBJC/PUDhETgiwhQd8y5s1s7oqr624/srO6ce89zzjn3nHsJEPwxyn5GVEJKBTcCdc80pAiYhkjfNWL+NnhLdTKqfxVOqJlxFX6E84wb86/6X4+5GRLw0/vsOgkREoFGBFx62P/uFviBP78FWrC02d/r79vcpmMl+k2uBwwJxIILTrVeyXsmK8krRLb5YGqUaCb9ksYnMuBqMtnRcY6V1nidml6texaY9CxSRm3TtKNIjcxrUjhEWKD3OnuNJEgPKSG/I6nUpo06fxwXH8lmEoyDFQIVyrROs7254z990rj0u2PLez47WqG1yu69V7ZdfDxU9He4C6P+v+HN+vlnD9Uou0Zp+NnfvveT/XL0kbGFxT/u37tx7CTdeuGlKfiibcMr/gt9qfyu05e4+YEdb7A3iEVG0ArdEAvDIPHBqTbB7bgCDA0sdH0x3/nEHDT4YFJi9siz74iaOBkK3ZyRTRXwE+FGG15BeA0Pf14hqinP3AyFJnHhnVm5xzThmNSBNFjDdvwzw75GFJIlvWhZ1UHlYlI3zIputa3CSduiRF7P09e9on+jODpanPOKsJMDOPV2wU7/BqsVPcQ2ix41X/8ARKpbfhPVtHNgik1hXAhIlmQ1rIbbcCVIzN/7+65794KRTc13IBwJXVkhRACBkAEyhVyiBqJbRn81YRjKUDfRN9xHpoVBt0xJRZ+iS4ehZFg2utJrjCO2GrAUAizcj+c3pXpiXVQwThZmdNrbrx+hAjtjbhSF5FPyKSsqmGraWKYCbfl97vMLi79fXHje7XsAhBsoo0P35fyMPpCj+lM0FDptJexuYzl82upRufxlKgrTh/+fOwBXc+Jt9jZJBTnxUbH/yGT5j4jRT2pB9O1oO/oi3FyD2/ggU14LY/j5RuHTJIZf5LR/WVmbaB2CT6xdQa4KwJZIHPfyMFoWRNSmQZDLlJVpdRw8GwwVWEGlScOGijdOq2VKyfHDB7/d1/+d37zXeT/dXG42l7/Kh2a20pd0JpxsxTVNt8KWyuu/94Ujr+7uvFpvQXP5PCfEAU4l+6pZZ9Ix3eqGqmsGrvok28V+zi6TKEYyi/Udt0MNavkkJC1e+vQA1tGqil6EV93j/UBbY0AXm/2Vku+z53x/8MDT5879U9Nb4Cqq/yf/WEjReiECfS9+C2f/6umFS/77q3t7kp0nGu8DTrFTQrwG1KtsoHVXlnXL0qMKHTRpGbaJlt7aoVsSbO3aQFb5L7MTJElIwrBMvnWxQteCEl2QREn8Ci/Ef9i7u1IT6tX5Pb/ePV+rUXKEL3DMkUPzc6OeNzo3/6C8K2QdrzVlKAYyHhBcxGgUyoCRqXimJZXYwYO1y1tWxQWKLkyfunpqevrU5vJs4SQ02JUDw94qMlC6maORJpc9AR/Sm7C4cK7S4MoL/FNqFYy+Nw5VbpIoWaWXP0atf+fj1Lb36w12h6SxShIouuNQw+TCVDNsWvHqDStpNUoFnobUs6mhUvpmn+r2VxaeuXjmCc974vSjm44OxfytrXeH5iaKxYm5fXMThcLEHLwcGzq66dHTnObMxWcWKv2u2tfa1ipMzu7rEM5OFshqLfsFu4R9thszrVjAUoHFgH98DxRreb3CK74rMTh/bWmJTq9Pd0nCZOvsbfrYrVsTty9cOPc5Or2U6spq8rXbrbNAL9yeuHWLYuEnEiErK0JIAPIN8kNyl9wn/yUt7mioN6GGTi1jDQrypNPRxQ+8zREatnUsVtgbcDHAaZA0rc6TxOIWLPFVXLDbvYRT45CDSnBOqFhee4aTcWw8gapGnS+Z+EYrOuqh825jrY5WSVwPDSewh/OWqYueCJQFEjhELTdgcdEODjUCo5yge7lcAlJxRSgceyZyu5LFfqnaeldKlsyunnK6N6LEaUSqTSndgpZK7jC7NZaR7LGcGhXwgMNC+WFt0MxEomZcECQ9EY4JkgAQDilSNKnGuxXJ0u2hdG9YUZkiZcfWpaOWkUv0G6IaCseVVH81o0dEEClKGokassX0hKSk44PxBGOS4E8cmNk+OMSY5+2cXfz8zI4hrG4jI9tnFpW/hqKx7PCnH1O7wpFkqeANT4IUVhopPTUwnNJxzSlUzLASV+4YfUIkpoQFTYvoMUFkJgtJ/Z6VEIyymx4usdCW5CuDc9s+dZDm6GeiejTl1jN6VFKUdMHMlUIWzaQEOdyrKHIsL0VZJB0TE1rUlLvCo71yPKya3dW+ONBQRBajUdPuKoXFsBAOiYoUdx7JtSXlU3ZJNAW1O+4ktBCFqBjLJhMW97JgyonISE5kVIJQJJ6tO6nueCJj1TV/D6uMzu06tH/H44NlRr3RnbNPLu7cXh75sWOklURzi5ZI9dgqG6tuEAf0bkWX0/0j6S6+RjfaYiQsbkKHhuNdms6kUExWZNGSlJgzkjIGjPK61KjLxOvGc/1/27r9KOQe7omHe+LhnvjQnmArLTyHMYHiPbGbFLEL4Q1BxOsiHrfy2HIBz67BXQbPsVbB4TNDZP/wF4x63cAxUl/PRtbXI61f2QM2/iuZUqleKr3ABp1Mxnn/rjvpOJN0b9K2k/73+Xi/VHOcGl4qyf8AzjWNo3icY2BkYGAA4uhnXafj+W2+MnCzgASiOB/va4DR///+/8/CysIElOBgAJEMAHS2DWQAAAB4nGNgZGBgYQABFtb/f///ZWFlYGRABToAW+YEPQAAAHicY2BgYGAhiP//J6wGCbNCMcP/vwxUBgDl4QRhAAAAeJxjYAACBQYThiCGAoYtjAyMZowBjPuYuJjCmBYxvWNWYXZhzmFewfyIRYUliPUOexr7EmIhAF3rF0sAeJxjYGRgYNBhZGRgZwABJiDmAkIGhv9gPgMADcIBTAB4nGWQPW7CQBSEx2BIAlKCFCkps1UKIpmfkgNAT0GXwpi1MbK91npBossJcoQcIaeIcoIcKGPzaGAtP38zb97uygAG+IWHenm4bWq9WrihOnGb9CDsk5+FO+jjRbhLfyjcwxumwn084p07eP4dnQFK4Rbu8SHcpv8p7JO/hDt4wrdwl/6PcA8r/An38eoN08gUsSncUif7LLRnef6utK1SU6hJMD5bC11oGzq9Ueujqg7J1LlYxdbkas6uzjKjSmt2OnLB1rlyNhrF4geRyZEigkGBuKkOS2gk2CNDCHvVvdQrpi0q+rVWmCDA+Cq1YKpokiGVxobJNY6sFQ48bUrXMa34Ws7kpLnMat4kIyv+77q3oxPRD7BtpkrMMOITX+SD5g75Pz0RXqgAAAB4nG2MyW6DQBiD+RKYpKT7vqf7Gg55pNHwEyJNGDSMRHj70nKtD7Zly45G0YA0+h8LRoyJSVBMmLJDyoxd9tjngEOOOOaEU84454JLrrjmhlvuuGfOA4888cwLr7zxzgeffPHNgixKtfeuzawUYTZYv16VITXaS8hy11azwf7FibGi/dS4Te2laWLj6k7lYiVIIv3aK9nWusqng2TLsXR900m2VMXaBvFxbXWnvBjn84mXor8pk54kqKa/NmUvVkyIg3NW/VK2jFvtKzQeR0uGRSgIrFlRYsip2FDT0LGNoh/MCkh9AAAA') format('woff')}[class*=' eruda-icon-'],[class^='eruda-icon-']{display:inline-block;font-family:eruda-icon!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.eruda-icon-arrow-left:before{content:'\f101'}.eruda-icon-arrow-right:before{content:'\f102'}.eruda-icon-caret-down:before{content:'\f103'}.eruda-icon-caret-right:before{content:'\f104'}.eruda-icon-clear:before{content:'\f105'}.eruda-icon-compress:before{content:'\f106'}.eruda-icon-copy:before{content:'\f107'}.eruda-icon-delete:before{content:'\f108'}.eruda-icon-error:before{content:'\f109'}.eruda-icon-expand:before{content:'\f10a'}.eruda-icon-eye:before{content:'\f10b'}.eruda-icon-filter:before{content:'\f10c'}.eruda-icon-play:before{content:'\f10d'}.eruda-icon-record:before{content:'\f10e'}.eruda-icon-refresh:before{content:'\f10f'}.eruda-icon-reset:before{content:'\f110'}.eruda-icon-search:before{content:'\f111'}.eruda-icon-select:before{content:'\f112'}.eruda-icon-tool:before{content:'\f113'}.eruda-icon-warn:before{content:'\f114'}@font-face{font-family:luna-console-icon;src:url('data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAasAAsAAAAACnAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAAI4AAADcIsYnIk9TLzIAAAGYAAAAPgAAAFZWmlGRY21hcAAAAdgAAAD2AAACyDioZ9NnbHlmAAAC0AAAAZgAAAH8Lq6nDGhlYWQAAARoAAAAMQAAADZ25cSzaGhlYQAABJwAAAAdAAAAJAgCBBRobXR4AAAEvAAAABkAAABYGAH//GxvY2EAAATYAAAAGAAAAC4J8glUbWF4cAAABPAAAAAfAAAAIAEjAFBuYW1lAAAFEAAAASkAAAIWm5e+CnBvc3QAAAY8AAAAcAAAAJ7qA/7MeJxNjTsOwjAQRJ8TJzE2hPBrKBBHQByAAiGqFBRcIBVCiqhyBA7O2AgRr9Y7M2+lxQCeAyeyy7W9U/fd8GKL5fsiH2vTPx8d7ufEbJpO/aagYc+RM7fEjBKnmiRuySmZUTNNf0wybYSRj9VoO4iU7NQh+Up8qelZs5EupP75Shfm2oz3Kmkvt/gARcgJKwAAeJxjYGQUZ5zAwMrAwNTJdIaBgaEfQjO+ZjBi5ACKMrAyM2AFAWmuKQwHGHQ/srGAuDEsTGBhRhABALQ1CMwAAHiczdJNbsIwEIbh1+QHQsJviNRFF1XX7aEQRZQNRQjEHXqgrnopn4B+E8+qqip117GeRB4nk4lloAAyeZIcwicBiw9lQ5/PGPf5nHfNV8yVyXlmzZY9R05cuMbydtOqZTfsOCh7Vjb02e8RVMXGHfc8aDxqwFKVF7QMtdLpmzUVDSOmTJjpnUH/3YJSBcofqv4Wyz8+b6FuWvXSjW1SV30r1sl/icYuofFZh+1+Yn+7dnPZuIW8uFa2big7t5JXZzX3znbh4Gp5c5UcnfVyciM5u6lc3ESuTnsZQ2JnLQ4S7J4ldjZjntj5jEVi5zaWCeUXWN4q9AAAeJxdUMFOU0EUnTMzb2o1FB5O5wENg31k5mExVEo7jSGBEuO6CStDmtbIBuiKBYg/gRu/ABO3/ocscOEXsHBpogtWvFfnvQgxJnduztx7zknuIXQyIYSDE9IgLwmBmIZI1pDYbTSxBqeW4KvrVKSmaaRKFZREE7YJIyONSLW6W37bLiRxscXNTH1zbnFqlnJ5Eu+G9MnT8JBy9l69ELx69Ohd9JCryrwcU07TbCU5H4y+jQbnyco/EF+8x1/eaX03bCzR8IgGwVn0WC/I8YOzaLGS+4+p4K8O/lcXkPhj/CP0ig1JQIhJyugCxz3o7LqH4YUH0L3swlMK3q+CV/HMbhkJAqlarm1jgd+97DpnfsKPeH15eT2+l9L5OJ/kcjZJfY6MU++wQPzI+PRECUJjo97aAtqupaqhFLHtRLHNf1Kwn9lAOid9L7tV9nzVldNL3dC+NmrGOGM+sme2VrO335Mda3foXlXravY57zemY23HkLs72RsW5JegDjZK99FnPPtwl8FX1i92IfAax6yfvkWf/AHb1F1JeJxjYGRgYABi3/mPYuP5bb4ycLOABKI4H+9rgNH//zIwsDCzMAElOBhAJAMAQ2IK+QAAAHicY2BkYGBhAAEWhv9///9lYWZgZEAFYgBbLQQgAAAAeJxjYGBgYGH4/58FTIPZf2FsSgAAM58EEwAAAHicY2AAgjyGJoYlDI8YPjD8ww8BeTMTR3icY2BkYGAQY3BhYGYAASYg5gJCBob/YD4DABGFAXQAeJxlkD1uwkAUhMdgSAJSghQpKbNVCiKZn5IDQE9Bl8KYtTGyvdZ6QaLLCXKEHCGniHKCHChj82hgLT9/M2/e7soABviFh3p5uG1qvVq4oTpxm/Qg7JOfhTvo40W4S38o3MMbpsJ9POKdO3j+HZ0BSuEW7vEh3Kb/KeyTv4Q7eMK3cJf+j3APK/wJ9/HqDdPIFLEp3FIn+yy0Z3n+rrStUlOoSTA+WwtdaBs6vVHro6oOydS5WMXW5GrOrs4yo0prdjpywda5cjYaxeIHkcmRIoJBgbipDktoJNgjQwh71b3UK6YtKvq1VpggwPgqtWCqaJIhlcaGyTWOrBUOPG1K1zGt+FrO5KS5zGreJCMr/u+6t6MT0Q+wbaZKzDDiE1/kg+YO+T89EV6oAAAAeJxtxksOgjAUQNF3kaIW/x9cBYtqgEAnLXlp0+1rwtQzuVcq2Vj5r6NiR42hYc+BI5aWE2cuXLlx58GTF286PmIm1ajGhzWnJub0S12cBjs4nVI/xhLabdXPS2JCiXgCK5lEwTHQMzKziHwBqnYYpg==') format('woff')}[class*=' luna-console-icon-'],[class^=luna-console-icon-]{display:inline-block;font-family:luna-console-icon!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.luna-console-icon-error:before{content:'\f101'}.luna-console-icon-input:before{content:'\f102'}.luna-console-icon-output:before{content:'\f103'}.luna-console-icon-warn:before{content:'\f104'}.luna-console-icon-caret-down:before{content:'\f105'}.luna-console-icon-caret-right:before{content:'\f106'}.luna-console{background:#fff;overflow-y:auto;-webkit-overflow-scrolling:touch;height:100%;position:relative;will-change:scroll-position;cursor:default;font-size:12px;font-family:ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace}.luna-console.luna-console-theme-dark{background-color:#242424}.luna-console-hidden{display:none}.luna-console-fake-logs{position:absolute;left:0;top:0;pointer-events:none;visibility:hidden;width:100%}.luna-console-logs{padding-top:1px;position:absolute;width:100%}.luna-console-log-container{box-sizing:content-box}.luna-console-log-container.luna-console-selected .luna-console-log-item{background:#ecf1f8}.luna-console-log-container.luna-console-selected .luna-console-log-item:not(.luna-console-error):not(.luna-console-warn){border-color:#ccdef5}.luna-console-header{white-space:nowrap;display:flex;font-size:11px;color:#545454;border-top:1px solid transparent;border-bottom:1px solid #ccc}.luna-console-header .luna-console-time-from-container{overflow-x:auto;-webkit-overflow-scrolling:touch;padding:3px 10px}.luna-console-nesting-level{width:14px;flex-shrink:0;margin-top:-1px;margin-bottom:-1px;position:relative;border-right:1px solid #ccc}.luna-console-nesting-level.luna-console-group-closed::before{content:''}.luna-console-nesting-level::before{border-bottom:1px solid #ccc;position:absolute;top:0;left:0;margin-left:100%;width:5px;height:100%;box-sizing:border-box}.luna-console-log-item{position:relative;display:flex;border-top:1px solid transparent;border-bottom:1px solid #ccc;margin-top:-1px;color:#333}.luna-console-log-item:after{content:'';display:block;clear:both}.luna-console-log-item .luna-console-code{display:inline;font-family:ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace}.luna-console-log-item .luna-console-code .luna-console-keyword{color:#881280}.luna-console-log-item .luna-console-code .luna-console-number{color:#1c00cf}.luna-console-log-item .luna-console-code .luna-console-operator{color:grey}.luna-console-log-item .luna-console-code .luna-console-comment{color:#236e25}.luna-console-log-item .luna-console-code .luna-console-string{color:#1a1aa6}.luna-console-log-item a{color:#15c!important}.luna-console-log-item .luna-console-icon-container{margin:0 -6px 0 10px}.luna-console-log-item .luna-console-icon-container .luna-console-icon{line-height:20px;font-size:12px;color:#333;position:relative}.luna-console-log-item .luna-console-icon-container .luna-console-icon-caret-down,.luna-console-log-item .luna-console-icon-container .luna-console-icon-caret-right{top:0;left:-2px}.luna-console-log-item .luna-console-icon-container .luna-console-icon-error{top:0;color:#ef3842}.luna-console-log-item .luna-console-icon-container .luna-console-icon-warn{top:0;color:#e8a400}.luna-console-log-item .luna-console-count{background:#8097bd;color:#fff;padding:2px 4px;border-radius:10px;font-size:12px;float:left;margin:1px -6px 0 10px}.luna-console-log-item .luna-console-log-content-wrapper{flex:1;overflow:hidden}.luna-console-log-item .luna-console-log-content{padding:3px 0;margin:0 10px;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:pre-wrap;-webkit-user-select:text;user-select:text}.luna-console-log-item .luna-console-log-content *{-webkit-user-select:text;user-select:text}.luna-console-log-item .luna-console-log-content>*{vertical-align:top}.luna-console-log-item .luna-console-log-content .luna-console-null,.luna-console-log-item .luna-console-log-content .luna-console-undefined{color:#5e5e5e}.luna-console-log-item .luna-console-log-content .luna-console-number{color:#1c00cf}.luna-console-log-item .luna-console-log-content .luna-console-boolean{color:#0d22aa}.luna-console-log-item .luna-console-log-content .luna-console-regexp,.luna-console-log-item .luna-console-log-content .luna-console-symbol{color:#881391}.luna-console-log-item .luna-console-data-grid,.luna-console-log-item .luna-console-dom-viewer{white-space:initial}.luna-console-log-item.luna-console-error{z-index:50;background:#fff0f0;color:red;border-top:1px solid #ffd6d6;border-bottom:1px solid #ffd6d6}.luna-console-log-item.luna-console-error .luna-console-stack{padding-left:1.2em;white-space:nowrap}.luna-console-log-item.luna-console-error .luna-console-count{background:red}.luna-console-log-item.luna-console-debug{z-index:20}.luna-console-log-item.luna-console-input{border-bottom-color:transparent}.luna-console-log-item.luna-console-warn{z-index:40;color:#5c5c00;background:#fffbe5;border-top:1px solid #fff5c2;border-bottom:1px solid #fff5c2}.luna-console-log-item.luna-console-warn .luna-console-count{background:#e8a400}.luna-console-log-item.luna-console-info{z-index:30}.luna-console-log-item.luna-console-group,.luna-console-log-item.luna-console-groupCollapsed{font-weight:700}.luna-console-preview{display:inline-block}.luna-console-preview .luna-console-preview-container{display:flex;align-items:center}.luna-console-preview .luna-console-json{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-left:12px}.luna-console-preview .luna-console-preview-icon-container{display:block}.luna-console-preview .luna-console-preview-icon-container .luna-console-icon{position:relative;font-size:12px}.luna-console-preview .luna-console-preview-icon-container .luna-console-icon-caret-down{top:2px}.luna-console-preview .luna-console-preview-icon-container .luna-console-icon-caret-right{top:1px}.luna-console-preview .luna-console-preview-content-container{word-break:break-all}.luna-console-preview .luna-console-descriptor,.luna-console-preview .luna-console-object-preview{font-style:italic}.luna-console-preview .luna-console-key{color:#881391}.luna-console-preview .luna-console-number{color:#1c00cf}.luna-console-preview .luna-console-null{color:#5e5e5e}.luna-console-preview .luna-console-string{color:#c41a16}.luna-console-preview .luna-console-boolean{color:#0d22aa}.luna-console-preview .luna-console-special{color:#5e5e5e}.luna-console-theme-dark{color-scheme:dark}.luna-console-theme-dark .luna-console-log-container.luna-console-selected .luna-console-log-item{background:#29323d}.luna-console-theme-dark .luna-console-log-container.luna-console-selected .luna-console-log-item:not(.luna-console-error):not(.luna-console-warn){border-color:#4173b4}.luna-console-theme-dark .luna-console-log-item{color:#a5a5a5;border-bottom-color:#3d3d3d}.luna-console-theme-dark .luna-console-log-item .luna-console-code .luna-console-keyword{color:#e36eec}.luna-console-theme-dark .luna-console-log-item .luna-console-code .luna-console-number{color:#9980ff}.luna-console-theme-dark .luna-console-log-item .luna-console-code .luna-console-operator{color:#7f7f7f}.luna-console-theme-dark .luna-console-log-item .luna-console-code .luna-console-comment{color:#747474}.luna-console-theme-dark .luna-console-log-item .luna-console-code .luna-console-string{color:#f29766}.luna-console-theme-dark .luna-console-log-item.luna-console-error{background:#290000;color:#ff8080;border-top-color:#5c0000;border-bottom-color:#5c0000}.luna-console-theme-dark .luna-console-log-item.luna-console-error .luna-console-count{background:#ff8080}.luna-console-theme-dark .luna-console-log-item.luna-console-warn{color:#ffcb6b;background:#332a00;border-top-color:#650;border-bottom-color:#650}.luna-console-theme-dark .luna-console-log-item .luna-console-count{background:#42597f;color:#949494}.luna-console-theme-dark .luna-console-log-item .luna-console-log-content .luna-console-null,.luna-console-theme-dark .luna-console-log-item .luna-console-log-content .luna-console-undefined{color:#7f7f7f}.luna-console-theme-dark .luna-console-log-item .luna-console-log-content .luna-console-boolean,.luna-console-theme-dark .luna-console-log-item .luna-console-log-content .luna-console-number{color:#9980ff}.luna-console-theme-dark .luna-console-log-item .luna-console-log-content .luna-console-regexp,.luna-console-theme-dark .luna-console-log-item .luna-console-log-content .luna-console-symbol{color:#e36eec}.luna-console-theme-dark .luna-console-icon-container .luna-console-icon-caret-down,.luna-console-theme-dark .luna-console-icon-container .luna-console-icon-caret-right{color:#9aa0a6}.luna-console-theme-dark .luna-console-header{border-bottom-color:#3d3d3d}.luna-console-theme-dark .luna-console-nesting-level{border-right-color:#3d3d3d}.luna-console-theme-dark .luna-console-nesting-level::before{border-bottom-color:#3d3d3d}.luna-console-theme-dark .luna-console-preview .luna-console-key{color:#e36eec}.luna-console-theme-dark .luna-console-preview .luna-console-number{color:#9980ff}.luna-console-theme-dark .luna-console-preview .luna-console-null{color:#7f7f7f}.luna-console-theme-dark .luna-console-preview .luna-console-string{color:#f29766}.luna-console-theme-dark .luna-console-preview .luna-console-boolean{color:#9980ff}.luna-console-theme-dark .luna-console-preview .luna-console-special{color:#7f7f7f}@font-face{font-family:luna-object-viewer-icon;src:url('data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAS8AAsAAAAAB7QAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAAGEAAACMISgl+k9TLzIAAAFsAAAAPQAAAFZLxUkWY21hcAAAAawAAADWAAACdBU42qdnbHlmAAAChAAAAC4AAAAwabU7V2hlYWQAAAK0AAAALwAAADZzjr4faGhlYQAAAuQAAAAYAAAAJAFyANlobXR4AAAC/AAAABAAAABAAZAAAGxvY2EAAAMMAAAAEAAAACIAtACobWF4cAAAAxwAAAAfAAAAIAEbAA9uYW1lAAADPAAAASkAAAIWm5e+CnBvc3QAAARoAAAAUwAAAHZW8MNZeJxNjTsOQFAQRc/z/+sV1mABohKV0gZeJRJR2X9cT4RJZu7nFIMBMjoGvHGaF6rdngcNAc/c/O/Nvq2W5E1igdNE2zv1iGh1c5FQPlYXUlJRyxt9+/pUKadQa/AveGEGZQAAAHicY2BkkGScwMDKwMBQx9ADJGWgdAIDJ4MxAwMTAyszA1YQkOaawnCAQfcjE8MJIFcITDIwMIIIAFqDCGkAAAB4nM2STQ4BQRCFv54ZP8MwFhYW4gQcShBsSERi50BWDuFCcwJedddKRGKnOt8k9aanqudVAy0gF3NRQLgTsLhJDVHP6UW94Kp8zEhKwYIlG/YcOXHm0mTPp96aumLLwdUQ1fcIqmJrwpSZL+iqak5JmyE1Ayr1bdGhr/2ZPmp/qPQtuj/uJzqQl+pfDyypesQD6AT/ElV8PjyrMccT9rdLR3PUFBI227VTio1jbm6dodg5VnPvmAsHxzofHfmi+Sbs/pwdWcXFkWdNSNg9arIE2QufuSCyAAB4nGNgZACBlQzTGZgYGMyVxVc2O073AIpAxHsYloHFRc2dPZY2OTIwAACmEQesAAB4nGNgZGBgAOINe2b6x/PbfGXgZjgBFIjifLyvAUEDwUqGZUCSg4EJxAEAUn4LLAB4nGNgZGBgOMHAACdXMjAyoAIBADizAkx4nGNgAIITUEwGAABZUAGReJxjYAACHgYJ3BAAE94BXXicY2BkYGAQYGBmANEMDExAzAWEDAz/wXwGAApcASsAeJxlkD1uwkAUhMdgSAJSghQpKbNVCiKZn5IDQE9Bl8KYtTGyvdZ6QaLLCXKEHCGniHKCHChj82hgLT9/M2/e7soABviFh3p5uG1qvVq4oTpxm/Qg7JOfhTvo40W4S38o3MMbpsJ9POKdO3j+HZ0BSuEW7vEh3Kb/KeyTv4Q7eMK3cJf+j3APK/wJ9/HqDdPIFLEp3FIn+yy0Z3n+rrStUlOoSTA+WwtdaBs6vVHro6oOydS5WMXW5GrOrs4yo0prdjpywda5cjYaxeIHkcmRIoJBgbipDktoJNgjQwh71b3UK6YtKvq1VpggwPgqtWCqaJIhlcaGyTWOrBUOPG1K1zGt+FrO5KS5zGreJCMr/u+6t6MT0Q+wbaZKzDDiE1/kg+YO+T89EV6oAAAAeJxdxjkOgCAUANE/uOOGB+FQBIjaaEJIuL6FsfE1M6Lk9fXPoKioaWjp6BnQjEzMLKwYNtHepZhtuMs1vpvO/ch4HIlIxhK4KVyc7BwiD8nvDlkA') format('woff')}[class*=' luna-object-viewer-icon-'],[class^=luna-object-viewer-icon-]{display:inline-block;font-family:luna-object-viewer-icon!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.luna-object-viewer-icon-caret-down:before{content:'\f101'}.luna-object-viewer-icon-caret-right:before{content:'\f102'}.luna-object-viewer{overflow-x:auto;-webkit-overflow-scrolling:touch;overflow-y:hidden;cursor:default;font-family:ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;font-size:12px;line-height:1.2;min-height:100%;color:#333;list-style:none!important}.luna-object-viewer ul{list-style:none!important;padding:0!important;padding-left:12px!important;margin:0!important}.luna-object-viewer li{position:relative;white-space:nowrap;line-height:16px;min-height:16px}.luna-object-viewer>li>.luna-object-viewer-key{display:none}.luna-object-viewer span{position:static!important}.luna-object-viewer li .luna-object-viewer-collapsed~.luna-object-viewer-close:before{color:#999}.luna-object-viewer-array .luna-object-viewer-object .luna-object-viewer-key{display:inline}.luna-object-viewer-null{color:#5e5e5e}.luna-object-viewer-regexp,.luna-object-viewer-string{color:#c41a16}.luna-object-viewer-number{color:#1c00cf}.luna-object-viewer-boolean{color:#0d22aa}.luna-object-viewer-special{color:#5e5e5e}.luna-object-viewer-key,.luna-object-viewer-key-lighter{color:#881391}.luna-object-viewer-key-lighter{opacity:.6}.luna-object-viewer-key-special{color:#5e5e5e}.luna-object-viewer-collapsed .luna-object-viewer-icon,.luna-object-viewer-expanded .luna-object-viewer-icon{position:absolute!important;left:-12px;color:#727272;font-size:12px}.luna-object-viewer-icon-caret-right{top:0}.luna-object-viewer-icon-caret-down{top:1px}.luna-object-viewer-expanded>.luna-object-viewer-icon-caret-down{display:inline}.luna-object-viewer-expanded>.luna-object-viewer-icon-caret-right{display:none}.luna-object-viewer-collapsed>.luna-object-viewer-icon-caret-down{display:none}.luna-object-viewer-collapsed>.luna-object-viewer-icon-caret-right{display:inline}.luna-object-viewer-hidden~ul{display:none}.luna-object-viewer-theme-dark{color:#fff}.luna-object-viewer-theme-dark .luna-object-viewer-null,.luna-object-viewer-theme-dark .luna-object-viewer-special{color:#a1a1a1}.luna-object-viewer-theme-dark .luna-object-viewer-regexp,.luna-object-viewer-theme-dark .luna-object-viewer-string{color:#f28b54}.luna-object-viewer-theme-dark .luna-object-viewer-boolean,.luna-object-viewer-theme-dark .luna-object-viewer-number{color:#9980ff}.luna-object-viewer-theme-dark .luna-object-viewer-key,.luna-object-viewer-theme-dark .luna-object-viewer-key-lighter{color:#5db0d7}@font-face{font-family:luna-dom-viewer-icon;src:url('data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAASgAAsAAAAAB4QAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAAFwAAACMIRYl8k9TLzIAAAFkAAAAPQAAAFZLxUkaY21hcAAAAaQAAADHAAACWBcU1KRnbHlmAAACbAAAAC4AAAAwabU7V2hlYWQAAAKcAAAALwAAADZzjr4faGhlYQAAAswAAAAYAAAAJAFyANdobXR4AAAC5AAAABAAAAA4AZAAAGxvY2EAAAL0AAAAEAAAAB4AnACQbWF4cAAAAwQAAAAfAAAAIAEZAA9uYW1lAAADJAAAASkAAAIWm5e+CnBvc3QAAARQAAAATgAAAG5m1cqleJxjYGRgYOBiMGCwY2BycfMJYeDLSSzJY5BiYGGAAJA8MpsxJzM9kYEDxgPKsYBpDiC2AdNMDGwMckCSGyzHCuSxA2kuIJ+HgReoggtJnANMcwJFGRmYAXZLBkt4nGNgZJBlnMDAysDAUMfQAyRloHQCAyeDMQMDEwMrMwNWEJDmmsJwgEH3IxPDCSBXCEwyMDCCCABbzwhtAAAAeJy1kksKwjAQhr/0oX0JLlyIZ9BDCQXtRkEEwQO56uV6Av0nmZWI4MIJX2H+JvNIBiiBXGxFAWEkYPaQGqKe00S94C5/xVJKwY49PQNnLly5Tdnzqb9JPXByNUT13YKipLVm4wvmilvR0ilfrboKFsy0N9OB2Yco32z+437SLVTQdo05dUksgF8z/8+6+B3dU2m67YR1u3fsLXtH7egtEq04OhZpcKzbk1OLs2NzcXE0F3rNhOW9ObqbKSRsVqYsQfYC6fYeiQB4nGNgZACBlQzTGZgYGMyVxVc2O073AIpAxHsYloHFRc2dPZY2OTIwAACmEQesAAB4nGNgZGBgAOLeSTNM4/ltvjJwM5wACkRxPt7XgKCBYCXDMiDJwcAE4gAAQEgKxAB4nGNgZGBgOMHAACdXMjAyoAI+ADixAkp4nGNgAIITUEwCAABMyAGReJxjYAACHgYJ7BAADsoBLXicY2BkYGDgY2BmANEMDExAzAWEDAz/wXwGAAomASkAeJxlkD1uwkAUhMdgSAJSghQpKbNVCiKZn5IDQE9Bl8KYtTGyvdZ6QaLLCXKEHCGniHKCHChj82hgLT9/M2/e7soABviFh3p5uG1qvVq4oTpxm/Qg7JOfhTvo40W4S38o3MMbpsJ9POKdO3j+HZ0BSuEW7vEh3Kb/KeyTv4Q7eMK3cJf+j3APK/wJ9/HqDdPIFLEp3FIn+yy0Z3n+rrStUlOoSTA+WwtdaBs6vVHro6oOydS5WMXW5GrOrs4yo0prdjpywda5cjYaxeIHkcmRIoJBgbipDktoJNgjQwh71b3UK6YtKvq1VpggwPgqtWCqaJIhlcaGyTWOrBUOPG1K1zGt+FrO5KS5zGreJCMr/u+6t6MT0Q+wbaZKzDDiE1/kg+YO+T89EV6oAAAAeJxdxk0KgCAUAOE3/adlJ/FQgqBuFETw+i2kTd9mRiYZvv4ZJmYWVjZ2Dk4UmosbwyPK1Vq69aVnPbamEBuOSqFj8WQSgUgTeQGPtA2iAAA=') format('woff')}[class*=' luna-dom-viewer-icon-'],[class^=luna-dom-viewer-icon-]{display:inline-block;font-family:luna-dom-viewer-icon!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.luna-dom-viewer-icon-arrow-down:before{content:'\f101'}.luna-dom-viewer-icon-arrow-right:before{content:'\f102'}.luna-dom-viewer{color:#333;background-color:#fff;font-family:Arial,Helvetica,sans-serif;box-sizing:border-box;-webkit-user-select:none;user-select:none;font-size:14px;overflow-y:auto;-webkit-overflow-scrolling:touch;background:0 0;overflow-x:hidden;word-wrap:break-word;padding:0 0 0 12px;font-size:12px;font-family:ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;cursor:default;list-style:none}.luna-dom-viewer.luna-dom-viewer-platform-windows{font-family:'Segoe UI',Tahoma,sans-serif}.luna-dom-viewer.luna-dom-viewer-platform-linux{font-family:Roboto,Ubuntu,Arial,sans-serif}.luna-dom-viewer .luna-dom-viewer-hidden,.luna-dom-viewer.luna-dom-viewer-hidden{display:none}.luna-dom-viewer .luna-dom-viewer-invisible,.luna-dom-viewer.luna-dom-viewer-invisible{visibility:hidden}.luna-dom-viewer *{box-sizing:border-box}.luna-dom-viewer ul{list-style:none}.luna-dom-viewer.luna-dom-viewer-theme-dark{color:#e8eaed}.luna-dom-viewer-toggle{min-width:12px;margin-left:-12px}.luna-dom-viewer-icon-arrow-down,.luna-dom-viewer-icon-arrow-right{position:absolute!important;font-size:12px!important}.luna-dom-viewer-tree-item{line-height:16px;min-height:16px;position:relative;z-index:10;outline:0}.luna-dom-viewer-tree-item.luna-dom-viewer-selected .luna-dom-viewer-selection,.luna-dom-viewer-tree-item:hover .luna-dom-viewer-selection{display:block}.luna-dom-viewer-tree-item:hover .luna-dom-viewer-selection{background:#f2f7fd}.luna-dom-viewer-tree-item.luna-dom-viewer-selected .luna-dom-viewer-selection{background:#e0e0e0}.luna-dom-viewer-tree-item.luna-dom-viewer-selected:focus .luna-dom-viewer-selection{background:#cfe8fc}.luna-dom-viewer-tree-item .luna-dom-viewer-icon-arrow-down{display:none}.luna-dom-viewer-tree-item.luna-dom-viewer-expanded .luna-dom-viewer-icon-arrow-down{display:inline-block}.luna-dom-viewer-tree-item.luna-dom-viewer-expanded .luna-dom-viewer-icon-arrow-right{display:none}.luna-dom-viewer-html-tag{color:#881280}.luna-dom-viewer-tag-name{color:#881280}.luna-dom-viewer-attribute-name{color:#994500}.luna-dom-viewer-attribute-value{color:#1a1aa6}.luna-dom-viewer-attribute-value.luna-dom-viewer-attribute-underline{text-decoration:underline}.luna-dom-viewer-html-comment{color:#236e25}.luna-dom-viewer-selection{position:absolute;display:none;left:-10000px;right:-10000px;top:0;bottom:0;z-index:-1}.luna-dom-viewer-children{margin:0;overflow-x:visible;overflow-y:visible;padding-left:15px}.luna-dom-viewer-text-node .luna-dom-viewer-keyword{color:#881280}.luna-dom-viewer-text-node .luna-dom-viewer-number{color:#1c00cf}.luna-dom-viewer-text-node .luna-dom-viewer-operator{color:grey}.luna-dom-viewer-text-node .luna-dom-viewer-comment{color:#236e25}.luna-dom-viewer-text-node .luna-dom-viewer-string{color:#1a1aa6}.luna-dom-viewer-theme-dark .luna-dom-viewer-icon-arrow-down,.luna-dom-viewer-theme-dark .luna-dom-viewer-icon-arrow-right{color:#9aa0a6}.luna-dom-viewer-theme-dark .luna-dom-viewer-html-tag,.luna-dom-viewer-theme-dark .luna-dom-viewer-tag-name{color:#5db0d7}.luna-dom-viewer-theme-dark .luna-dom-viewer-attribute-name{color:#9bbbdc}.luna-dom-viewer-theme-dark .luna-dom-viewer-attribute-value{color:#f29766}.luna-dom-viewer-theme-dark .luna-dom-viewer-html-comment{color:#898989}.luna-dom-viewer-theme-dark .luna-dom-viewer-tree-item:hover .luna-dom-viewer-selection{background:#083c69}.luna-dom-viewer-theme-dark .luna-dom-viewer-tree-item.luna-dom-viewer-selected .luna-dom-viewer-selection{background:#454545}.luna-dom-viewer-theme-dark .luna-dom-viewer-tree-item.luna-dom-viewer-selected:focus .luna-dom-viewer-selection{background:#073d69}.luna-dom-viewer-theme-dark .luna-dom-viewer-text-node .luna-dom-viewer-keyword{color:#e36eec}.luna-dom-viewer-theme-dark .luna-dom-viewer-text-node .luna-dom-viewer-number{color:#9980ff}.luna-dom-viewer-theme-dark .luna-dom-viewer-text-node .luna-dom-viewer-operator{color:#7f7f7f}.luna-dom-viewer-theme-dark .luna-dom-viewer-text-node .luna-dom-viewer-comment{color:#747474}.luna-dom-viewer-theme-dark .luna-dom-viewer-text-node .luna-dom-viewer-string{color:#f29766}@font-face{font-family:luna-text-viewer-icon;src:url('data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAS0AAsAAAAAB2QAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAAFQAAAB0INElr09TLzIAAAFcAAAAPQAAAFZL+0klY21hcAAAAZwAAACfAAACEAEewxRnbHlmAAACPAAAAIYAAACkNSDggmhlYWQAAALEAAAALgAAADZzrb4oaGhlYQAAAvQAAAAWAAAAJAGRANNobXR4AAADDAAAABAAAAAoAZAAAGxvY2EAAAMcAAAAEAAAABYBWgFIbWF4cAAAAywAAAAdAAAAIAEXADtuYW1lAAADTAAAASkAAAIWm5e+CnBvc3QAAAR4AAAAOwAAAFJIWdOleJxjYGRgYOBiMGCwY2BycfMJYeDLSSzJY5BiYGGAAJA8MpsxJzM9kYEDxgPKsYBpDiBWAdNMDGwMQkAWK1CGlYEZyGMCstiBMpxAUUYGZgDbGgXDeJxjYGTQYJzAwMrAwFDH0AMkZaB0AgMngzEDAxMDKzMDVhCQ5prCcIAh+SMTwwkgVwhMMjAwgggAY84IrgAAAHicvZFLCsMwDERHzsdJ6aL0HD1VQiDQRbIN9Axd9aI+QTpjq5Bdd5F4Bo1lybIBNAAq8iA1YB8YZG+qlvUKl6zXGBjf6MofMWHGEyu2FPb9oCxULCtHs3yy+J2urg1rtojo0HM/MKnFGabOGlbdYvdT+1N6/7drXl8e6Vajo3efHP3b7HAUvntBMy1OJKujMTeHNZMV9McpFBC+tLgY4QB4nGNgZACBEwzrGdgZGOwZxdnVDdXNPfKEGlhchO0KhZtZ3IQYmMFq1jCsZpBi0GLQY2AwNzGzZjQSk2UUYdNmVFID8UyVRUXYlNRMlVGlTM1FjU3tmZkTmVhYmFRBhHwoCyuzKgtTIjMzWJg3ZClIGMRlZQmVB7GhMixM0aGhQIsB52sTqgAAeJxjYGRgYADi2JNxkvH8Nl8ZuBlOAAWiOB/va0DQQHCCYT2Q5GBgAnEANJ0KnQAAeJxjYGRgYDjBwIBEMjKgAi4AOvoCZQAAeJxjYACCE1CMBwAAM7gBkXicY2AAAiGGIFQIABXIAqN4nGNgZGBg4GLQZ2BmAAEmMI8LSP4H8xkADjQBUwAAAHicZZA9bsJAFITHYEgCUoIUKSmzVQoimZ+SA0BPQZfCmLUxsr3WekGiywlyhBwhp4hyghwoY/NoYC0/fzNv3u7KAAb4hYd6ebhtar1auKE6cZv0IOyTn4U76ONFuEt/KNzDG6bCfTzinTt4/h2dAUrhFu7xIdym/ynsk7+EO3jCt3CX/o9wDyv8Cffx6g3TyBSxKdxSJ/sstGd5/q60rVJTqEkwPlsLXWgbOr1R66OqDsnUuVjF1uRqzq7OMqNKa3Y6csHWuXI2GsXiB5HJkSKCQYG4qQ5LaCTYI0MIe9W91CumLSr6tVaYIMD4KrVgqmiSIZXGhsk1jqwVDjxtStcxrfhazuSkucxq3iQjK/7vurejE9EPsG2mSsww4hNf5IPmDvk/PRFeqAAAAHicXcU7CsAgFEXBe4x/l/kQBAtt3X0KSZNpRk7X91/F8eAJRBKZQqUp2Og2va19MAadyWJzpBd4kgcWAA==') format('woff')}[class*=' luna-text-viewer-icon-'],[class^=luna-text-viewer-icon-]{display:inline-block;font-family:luna-text-viewer-icon!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.luna-text-viewer-icon-check:before{content:'\f101'}.luna-text-viewer-icon-copy:before{content:'\f102'}.luna-text-viewer{color:#333;background-color:#fff;font-family:Arial,Helvetica,sans-serif;box-sizing:border-box;-webkit-user-select:none;user-select:none;font-size:14px;padding:0;unicode-bidi:embed;position:relative;overflow:auto;border:1px solid #ccc}.luna-text-viewer.luna-text-viewer-platform-windows{font-family:'Segoe UI',Tahoma,sans-serif}.luna-text-viewer.luna-text-viewer-platform-linux{font-family:Roboto,Ubuntu,Arial,sans-serif}.luna-text-viewer .luna-text-viewer-hidden,.luna-text-viewer.luna-text-viewer-hidden{display:none}.luna-text-viewer .luna-text-viewer-invisible,.luna-text-viewer.luna-text-viewer-invisible{visibility:hidden}.luna-text-viewer *{box-sizing:border-box}.luna-text-viewer.luna-text-viewer-theme-dark{color:#d9d9d9;border-color:#3d3d3d;background:#242424}.luna-text-viewer:hover .luna-text-viewer-copy{opacity:1}.luna-text-viewer-table{display:table}.luna-text-viewer-table .luna-text-viewer-line-number,.luna-text-viewer-table .luna-text-viewer-line-text{padding:0}.luna-text-viewer-table-row{display:table-row}.luna-text-viewer-line-number{display:table-cell;padding:0 3px 0 8px!important;text-align:right;vertical-align:top;-webkit-user-select:none;user-select:none;border-right:1px solid #ccc}.luna-text-viewer-line-text{display:table-cell;padding-left:4px!important;-webkit-user-select:text;user-select:text}.luna-text-viewer-copy{background:#fff;opacity:0;position:absolute;right:5px;top:5px;border:1px solid #ccc;border-radius:4px;width:25px;height:25px;text-align:center;line-height:25px;cursor:pointer;transition:opacity .3s,top .3s}.luna-text-viewer-copy .luna-text-viewer-icon-check{color:#188037}.luna-text-viewer-text{padding:4px;font-size:12px;font-family:ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;box-sizing:border-box;white-space:pre;display:block}.luna-text-viewer-text.luna-text-viewer-line-numbers{padding:0}.luna-text-viewer-text.luna-text-viewer-wrap-long-lines{white-space:pre-wrap}.luna-text-viewer-text.luna-text-viewer-wrap-long-lines .luna-text-viewer-line-text{word-break:break-all}.luna-text-viewer-theme-dark{color-scheme:dark}.luna-text-viewer-theme-dark .luna-text-viewer-copy,.luna-text-viewer-theme-dark .luna-text-viewer-line-number{border-color:#3d3d3d}.luna-text-viewer-theme-dark .luna-text-viewer-copy .luna-text-viewer-icon-check{color:#81c995}.luna-text-viewer-theme-dark .luna-text-viewer-copy{background-color:#242424}</style>
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Pratibha Handicrafts | प्रतिभा हैंडीक्राफ्ट्स — Pipraich, Gorakhpur</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            --royal: #6B0F1A;
+            --royal-dark: #3E060D;
+            --royal-light: #9E1B2B;
+            --gold: #D4AF37;
+            --gold-bright: #F5C518;
+            --gold-soft: #FDF6E2;
+            --bg: #F1F3F6;
+            --card: #FFFFFF;
+            --text: #0F1111;
+            --muted: #565959;
+            --border: #D5D9D9;
+            --green: #007600;
+            --wa: #16A34A;
+            --danger: #CC0C39;
+            --amz-yellow: #FFD814;
+            --amz-orange: #FFA41C;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', -apple-system, sans-serif; -webkit-tap-highlight-color: transparent; }
+        html { scroll-behavior: smooth; }
+        body { background: var(--bg); color: var(--text); padding-bottom: 68px; overflow-x: hidden; }
+
+        /* Top Promo Ticker */
+        .promo-bar { background: var(--royal-dark); color: #FDE68A; font-size: 11px; font-weight: 600; padding: 6px 12px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(212,175,55,0.3); }
+        .promo-bar-inner { max-width: 1340px; margin: 0 auto; width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+        .promo-badge { background: var(--danger); color: #fff; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 800; margin-right: 6px; }
+
+        /* Main Amazon-Style Header */
+        header { background: var(--royal); color: #fff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 3px 12px rgba(0,0,0,0.22); }
+        .nav-main { max-width: 1340px; margin: 0 auto; padding: 10px 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+        .brand { display: flex; align-items: center; gap: 10px; cursor: pointer; text-decoration: none; color: #fff; flex-shrink: 0; }
+        .brand-icon { width: 40px; height: 40px; border-radius: 10px; background: linear-gradient(135deg, #FDE68A, #D4AF37); color: var(--royal-dark); font-family: 'Playfair Display', serif; font-weight: 800; font-size: 22px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.3); border: 2px solid #fff; }
+        .brand-info h1 { font-family: 'Playfair Display', serif; font-size: 17px; color: #FDE68A; line-height: 1.1; letter-spacing: 0.3px; }
+        .brand-info p { font-size: 10px; color: #F3E5AB; display: flex; align-items: center; gap: 4px; margin-top: 2px; }
+        .verified-dot { background: #22C55E; color: #fff; font-size: 8px; padding: 1px 4px; border-radius: 3px; font-weight: 700; }
+
+        /* Search Bar with Category Dropdown */
+        .search-wrap { flex: 1; max-width: 640px; position: relative; }
+        .search-bar { display: flex; background: #fff; border-radius: 8px; overflow: hidden; border: 2px solid var(--gold); height: 40px; }
+        .search-bar select { background: #F3F4F6; border: none; border-right: 1px solid #D1D5DB; padding: 0 8px; font-size: 11px; font-weight: 600; color: #374151; outline: none; max-width: 90px; cursor: pointer; }
+        .search-bar input { flex: 1; border: none; padding: 0 12px; font-size: 13px; color: var(--text); outline: none; min-width: 0; }
+        .search-bar button { background: var(--gold); border: none; width: 44px; color: var(--royal-dark); font-size: 16px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        .search-suggestions { position: absolute; top: 44px; left: 0; right: 0; background: #fff; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); border: 1px solid var(--border); z-index: 1200; display: none; max-height: 280px; overflow-y: auto; }
+        .sug-item { padding: 10px 14px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #F3F4F6; cursor: pointer; color: var(--text); font-size: 13px; }
+        .sug-item:hover { background: var(--gold-soft); }
+        .sug-item img { width: 34px; height: 34px; border-radius: 6px; object-fit: cover; }
+
+        /* Header Action Icons */
+        .nav-actions { display: flex; align-items: center; gap: 6px; }
+        .hdr-btn { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 7px 10px; border-radius: 8px; cursor: pointer; display: flex; align-items: center; gap: 6px; position: relative; font-size: 12px; font-weight: 600; transition: 0.2s; }
+        .hdr-btn:hover { background: rgba(255,255,255,0.18); border-color: var(--gold); }
+        .hdr-btn i { font-size: 15px; color: #FDE68A; }
+        .hdr-btn .txt { display: none; }
+        .count-pill { position: absolute; top: -5px; right: -5px; background: var(--gold-bright); color: var(--royal-dark); font-size: 10px; font-weight: 800; min-width: 18px; height: 18px; border-radius: 99px; display: flex; align-items: center; justify-content: center; padding: 0 4px; border: 1.5px solid var(--royal); }
+
+        /* Mobile Search Row */
+        .mobile-search-row { padding: 0 14px 10px; display: block; }
+        .desktop-search-row { display: none; flex: 1; max-width: 600px; }
+
+        /* Location & Quick Links Sub-Bar */
+        .sub-nav { background: #520912; color: #F3E5AB; padding: 7px 14px; font-size: 11px; border-top: 1px solid rgba(255,255,255,0.08); }
+        .sub-nav-inner { max-width: 1340px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
+        .sub-nav-inner::-webkit-scrollbar { display: none; }
+        .loc-btn { display: inline-flex; align-items: center; gap: 5px; color: #fff; font-weight: 600; cursor: pointer; background: rgba(255,255,255,0.1); padding: 3px 8px; border-radius: 4px; }
+        .sub-links { display: flex; align-items: center; gap: 14px; }
+        .sub-links a { color: #FDE68A; text-decoration: none; font-weight: 600; cursor: pointer; }
+
+        /* Story-Style Visual Category Circles */
+        .cat-circles-wrap { background: #fff; border-bottom: 1px solid var(--border); padding: 12px 0; }
+        .cat-circles { max-width: 1340px; margin: 0 auto; padding: 0 14px; display: flex; gap: 14px; overflow-x: auto; scrollbar-width: none; }
+        .cat-circles::-webkit-scrollbar { display: none; }
+        .cat-circle-item { display: flex; flex-direction: column; align-items: center; gap: 5px; cursor: pointer; flex-shrink: 0; width: 68px; text-align: center; }
+        .cat-ring { width: 56px; height: 56px; border-radius: 50%; padding: 2px; background: linear-gradient(135deg, var(--royal), var(--gold)); transition: 0.2s; }
+        .cat-circle-item.active .cat-ring { transform: scale(1.08); box-shadow: 0 4px 12px rgba(107,15,26,0.3); }
+        .cat-ring img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 2px solid #fff; background: #fff; }
+        .cat-circle-item span { font-size: 11px; font-weight: 600; color: var(--text); line-height: 1.15; }
+        .cat-circle-item.active span { color: var(--royal); font-weight: 800; }
+
+        /* Main Container */
+        .main-wrap { max-width: 1340px; margin: 0 auto; padding: 12px 14px; }
+
+        /* Hero Banner Slider */
+        .hero-slider { position: relative; border-radius: 14px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.12); margin-bottom: 14px; background: var(--royal-dark); }
+        .slide { display: none; padding: 24px 20px; color: #fff; min-height: 210px; position: relative; background-size: cover; background-position: center; }
+        .slide.active { display: flex; flex-direction: column; justify-content: center; }
+        .slide-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(46,4,9,0.94) 0%, rgba(107,15,26,0.82) 60%, rgba(46,4,9,0.4) 100%); }
+        .slide-content { position: relative; z-index: 2; max-width: 540px; display: flex; flex-direction: column; gap: 8px; }
+        .slide-badge { background: var(--gold); color: var(--royal-dark); font-size: 10px; font-weight: 800; padding: 3px 9px; border-radius: 99px; width: fit-content; text-transform: uppercase; }
+        .slide-content h2 { font-family: 'Playfair Display', serif; font-size: 24px; line-height: 1.2; color: #fff; }
+        .slide-content p { font-size: 12px; color: #F3E5AB; line-height: 1.45; }
+        .slide-btns { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
+        .btn-primary { background: var(--gold-bright); color: var(--royal-dark); border: none; padding: 9px 16px; border-radius: 8px; font-size: 12px; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+        .btn-glass { background: rgba(255,255,255,0.15); color: #fff; border: 1px solid rgba(255,255,255,0.4); padding: 9px 14px; border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer; }
+        .slider-dots { position: absolute; bottom: 10px; right: 14px; display: flex; gap: 6px; z-index: 5; }
+        .dot { width: 8px; height: 8px; border-radius: 99px; background: rgba(255,255,255,0.4); cursor: pointer; transition: 0.2s; }
+        .dot.active { width: 22px; background: var(--gold-bright); }
+
+        /* Deal of the Day Strip + Coupons */
+        .deals-strip { background: linear-gradient(90deg, #FFFBEB, #FEF3C7); border: 1px solid #F59E0B; border-radius: 12px; padding: 10px 14px; margin-bottom: 14px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+        .deal-left { display: flex; align-items: center; gap: 10px; }
+        .timer-box { background: var(--danger); color: #fff; font-weight: 800; font-size: 12px; padding: 5px 10px; border-radius: 6px; letter-spacing: 0.5px; }
+        .coupon-chips { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; }
+        .coupon-chip { background: #fff; border: 1px dashed var(--royal); padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; color: var(--royal); cursor: pointer; white-space: nowrap; }
+
+        /* Filter & Sort Bar */
+        .filter-bar { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; margin-bottom: 14px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+        .filter-pills { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; align-items: center; }
+        .filter-pills::-webkit-scrollbar { display: none; }
+        .f-pill { padding: 6px 11px; border-radius: 99px; border: 1px solid var(--border); background: #F9FAFB; font-size: 11px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+        .f-pill.active { background: var(--royal); color: #fff; border-color: var(--royal); }
+        .sort-box { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; }
+        .sort-box select { padding: 6px 10px; border-radius: 6px; border: 1px solid var(--border); font-size: 12px; font-weight: 600; background: #fff; outline: none; }
+
+        /* Amazon Pro Product Grid */
+        .product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+        .p-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; transition: 0.2s; position: relative; }
+        .p-card:hover { box-shadow: 0 8px 22px rgba(0,0,0,0.1); transform: translateY(-2px); }
+        .p-img-wrap { position: relative; width: 100%; aspect-ratio: 1/1; background: #F8FAFC; overflow: hidden; cursor: pointer; }
+        .p-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.35s ease; }
+        .p-card:hover .p-img-wrap img { transform: scale(1.04); }
+        .p-badge { position: absolute; top: 7px; left: 7px; background: var(--danger); color: #fff; font-size: 9px; font-weight: 800; padding: 3px 7px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
+        .p-custom-tag { position: absolute; bottom: 7px; left: 7px; background: rgba(17,24,39,0.82); color: #FDE68A; font-size: 9px; font-weight: 700; padding: 2px 6px; border-radius: 4px; backdrop-filter: blur(4px); }
+        .p-wish { position: absolute; top: 7px; right: 7px; width: 30px; height: 30px; border-radius: 50%; background: rgba(255,255,255,0.92); border: 1px solid #E5E7EB; display: flex; align-items: center; justify-content: center; cursor: pointer; color: #6B7280; font-size: 14px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .p-wish.wished { color: #E11D48; }
+
+        .p-info { padding: 10px; display: flex; flex-direction: column; gap: 4px; flex: 1; }
+        .p-brand { font-size: 10px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.4px; }
+        .p-title { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; cursor: pointer; }
+        .p-title:hover { color: var(--royal); }
+        .p-rating { display: flex; align-items: center; gap: 4px; font-size: 11px; margin-top: 1px; }
+        .rating-pill { background: var(--green); color: #fff; font-weight: 700; font-size: 10px; padding: 1px 5px; border-radius: 3px; display: inline-flex; align-items: center; gap: 2px; }
+        .p-price-row { display: flex; align-items: baseline; gap: 5px; flex-wrap: wrap; margin-top: 3px; }
+        .p-price { font-size: 17px; font-weight: 800; color: var(--text); }
+        .p-mrp { font-size: 11px; color: var(--muted); text-decoration: line-through; }
+        .p-disc { font-size: 11px; font-weight: 700; color: var(--danger); }
+        .p-ship { font-size: 10px; color: var(--muted); margin-top: 2px; }
+        .p-ship b { color: var(--green); }
+
+        .p-btns { padding: 0 10px 10px; display: grid; grid-template-columns: 1fr 34px; gap: 6px; }
+        .btn-amz-cart { background: var(--amz-yellow); border: 1px solid #FCD200; color: #0F1111; font-size: 12px; font-weight: 700; padding: 8px 6px; border-radius: 7px; cursor: pointer; text-align: center; transition: 0.15s; }
+        .btn-amz-cart:active { background: #F7CA00; transform: scale(0.98); }
+        .btn-quick-wa { background: #DCFCE7; border: 1px solid #86EFAC; color: #15803D; border-radius: 7px; display: flex; align-items: center; justify-content: center; font-size: 15px; cursor: pointer; }
+
+        /* Feature Sections: Custom Studio Banner, Reviews & Store Map */
+        .studio-card { background: linear-gradient(135deg, #FFFDF9 0%, #FDF6E2 100%); border: 2px solid var(--gold); border-radius: 14px; padding: 20px; margin: 22px 0; display: grid; grid-template-columns: 1fr; gap: 16px; }
+        .faq-item { background: #fff; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 8px; overflow: hidden; }
+        .faq-q { padding: 12px 14px; font-size: 13px; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-a { padding: 0 14px 12px; font-size: 12px; color: var(--muted); line-height: 1.5; display: none; }
+        .faq-item.open .faq-a { display: block; }
+
+        /* Footer */
+        footer { background: #1F0408; color: #E5E7EB; padding: 32px 14px 24px; margin-top: 28px; }
+        .footer-grid { max-width: 1340px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 20px; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 20px; }
+        .footer-col h4 { color: var(--gold); font-family: 'Playfair Display', serif; font-size: 16px; margin-bottom: 10px; }
+        .footer-col p, .footer-col li { font-size: 12px; color: #D1D5DB; line-height: 1.6; list-style: none; }
+
+        /* Bottom Mobile App Bar */
+        .bottom-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid var(--border); display: flex; justify-content: space-around; padding: 6px 0; z-index: 990; box-shadow: 0 -2px 10px rgba(0,0,0,0.06); }
+        .b-tab { background: none; border: none; display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 10px; font-weight: 600; color: var(--muted); cursor: pointer; position: relative; padding: 2px 10px; }
+        .b-tab i { font-size: 17px; }
+        .b-tab.active { color: var(--royal); font-weight: 800; }
+
+        /* Universal Modal / Drawer System */
+        .modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,0.65); z-index: 2000; display: none; align-items: flex-end; justify-content: center; backdrop-filter: blur(2px); }
+        .modal-bg.open { display: flex; }
+        .modal-box { background: #fff; width: 100%; max-width: 600px; max-height: 92vh; border-radius: 18px 18px 0 0; overflow-y: auto; display: flex; flex-direction: column; animation: popUp 0.22s ease-out; }
+        @keyframes popUp { from { transform: translateY(60px); opacity: 0.5; } to { transform: translateY(0); opacity: 1; } }
+        .modal-hdr { position: sticky; top: 0; background: #fff; z-index: 10; padding: 14px 16px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+        .modal-hdr h3 { font-size: 16px; font-weight: 800; color: var(--text); }
+        .close-x { width: 32px; height: 32px; border-radius: 50%; border: none; background: #F3F4F6; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        .modal-body { padding: 16px; }
+
+        /* Product Detail Modal Specifics */
+        .pd-gallery { position: relative; border-radius: 12px; overflow: hidden; background: #F9FAFB; border: 1px solid var(--border); margin-bottom: 12px; }
+        .pd-gallery img { width: 100%; max-height: 320px; object-fit: cover; display: block; }
+        .variant-pills { display: flex; gap: 8px; flex-wrap: wrap; margin: 6px 0 12px; }
+        .v-pill { padding: 7px 12px; border-radius: 8px; border: 1.5px solid var(--border); font-size: 12px; font-weight: 700; cursor: pointer; background: #fff; }
+        .v-pill.selected { border-color: var(--royal); background: #FFF1F2; color: var(--royal); }
+        .spec-table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 12px; }
+        .spec-table td { padding: 7px 8px; border-bottom: 1px solid #F3F4F6; }
+        .spec-table td:first-child { font-weight: 700; color: var(--muted); width: 40%; }
+
+        /* Forms & Inputs */
+        .inp-group { margin-bottom: 12px; }
+        .inp-group label { display: block; font-size: 12px; font-weight: 700; color: #374151; margin-bottom: 4px; }
+        .inp-group input, .inp-group select, .inp-group textarea { width: 100%; padding: 10px 12px; border: 1px solid #D1D5DB; border-radius: 8px; font-size: 13px; outline: none; }
+        .inp-group input:focus, .inp-group textarea:focus { border-color: var(--royal); }
+
+        /* Cart & Bill Summary */
+        .cart-row { display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid #F3F4F6; }
+        .cart-row img { width: 72px; height: 72px; border-radius: 8px; object-fit: cover; border: 1px solid var(--border); }
+        .qty-ctrl { display: inline-flex; align-items: center; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; margin-top: 6px; }
+        .qty-ctrl button { width: 28px; height: 26px; border: none; background: #F3F4F6; font-weight: 800; cursor: pointer; }
+        .qty-ctrl span { padding: 0 10px; font-size: 12px; font-weight: 700; }
+        .bill-box { background: #F9FAFB; border: 1px solid var(--border); border-radius: 10px; padding: 12px; margin: 14px 0; font-size: 12px; }
+        .bill-line { display: flex; justify-content: space-between; margin-bottom: 6px; }
+        .bill-total { display: flex; justify-content: space-between; font-size: 15px; font-weight: 800; color: var(--royal); border-top: 1px solid var(--border); padding-top: 8px; margin-top: 6px; }
+
+        /* Toast Notification */
+        .toast-pop { position: fixed; top: 76px; left: 50%; transform: translateX(-50%); background: #111827; color: #fff; padding: 10px 18px; border-radius: 99px; font-size: 12px; font-weight: 700; z-index: 3000; display: none; align-items: center; gap: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); white-space: nowrap; }
+
+        @media (min-width: 768px) {
+            body { padding-bottom: 0; }
+            .mobile-search-row, .bottom-bar { display: none; }
+            .desktop-search-row { display: block; }
+            .hdr-btn .txt { display: inline; }
+            .product-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+            .studio-card { grid-template-columns: 1.2fr 1fr; align-items: center; padding: 28px; }
+            .footer-grid { grid-template-columns: 1.5fr 1fr 1fr 1fr; }
+            .modal-bg { align-items: center; padding: 16px; }
+            .modal-box { border-radius: 16px; max-height: 88vh; }
+            .slide { min-height: 270px; padding: 36px 44px; }
+            .slide-content h2 { font-size: 34px; }
+        }
+    </style>
+</head><div id="eruda" style="all: initial;"></div><div class="__chobitsu-hide__" style="all: initial;"></div>
+<body>
+
+    <!-- Top Promo Bar -->
+    <div class="promo-bar">
+        <div class="promo-bar-inner">
+            <div><span class="promo-badge">LIVE CLOUD</span><span id="top-promo-text">Use Code PRATIBHA10 for 10% OFF | Free Store Pickup at Vijay Chowk, Pipraich!</span></div>
+            <div style="display:flex; gap:10px; flex-shrink:0;">
+                <span style="cursor:pointer;" onclick="openModal('orders-modal')"><i class="fa-solid fa-box"></i> Track Orders</span>
+                <span style="cursor:pointer;" onclick="openAdminAuth()"><i class="fa-solid fa-shield-halved"></i> Owner Login</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Header -->
+    <header>
+        <div class="nav-main">
+            <a class="brand" onclick="resetAllFilters()">
+                <div class="brand-icon">प्र</div>
+                <div class="brand-info">
+                    <h1>Pratibha Handicrafts</h1>
+                    <p>प्रतिभा हैंडीक्राफ्ट्स <span class="verified-dot">✓ CLOUD SYNCED</span></p>
+                </div>
+            </a>
+
+            <!-- Desktop Search -->
+            <div class="desktop-search-row search-wrap">
+                <div class="search-bar">
+                    <select id="search-cat-desk" onchange="selectCategory(this.value)">
+                        <option value="All">All</option>
+                        <option value="Varmala">Varmala</option>
+                        <option value="Chunri">Chunri</option>
+                        <option value="Thali">Thali</option>
+                        <option value="Platters">Platters</option>
+                        <option value="Lippan">Lippan Art</option>
+                        <option value="Resin">Resin Gifts</option>
+                        <option value="Jootis">Jootis</option>
+                    </select>
+                    <input type="text" id="inp-search-desk" oninput="handleSearch(this.value)" placeholder="Search Varmala Preservation, Name Chunri, Karwa Chauth Thali, Jootis...">
+                    <button onclick="triggerSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="search-suggestions" id="sug-desk" style="display: none;"></div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="nav-actions">
+                <button class="hdr-btn" onclick="openModal('custom-modal')" title="Custom Order">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span class="txt">Customize</span>
+                </button>
+                <button class="hdr-btn" onclick="openModal('wish-modal')" title="Wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="txt">Wishlist</span>
+                    <span class="count-pill" id="badge-wish">0</span>
+                </button>
+                <button class="hdr-btn" onclick="openModal('cart-modal')" title="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="txt">Cart</span>
+                    <span class="count-pill" id="badge-cart">0</span>
+                </button>
+                <button class="hdr-btn" onclick="openAdminAuth()" title="Shop Owner Panel">
+                    <i class="fa-solid fa-user-gear"></i>
+                    <span class="txt">Admin</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Search -->
+        <div class="mobile-search-row search-wrap">
+            <div class="search-bar">
+                <input type="text" id="inp-search-mob" oninput="handleSearch(this.value)" placeholder="Search Varmala, Bridal Chunri, Thali, Jootis...">
+                <button onclick="triggerSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="search-suggestions" id="sug-mob" style="display: none;"></div>
+        </div>
+
+        <!-- Sub Navigation -->
+        <div class="sub-nav">
+            <div class="sub-nav-inner">
+                <div class="loc-btn" onclick="openModal('pincode-modal')">
+                    <i class="fa-solid fa-location-dot" style="color:#FDE68A;"></i>
+                    <span id="active-location">Deliver to: Pipraich, Gorakhpur 273152</span>
+                    <i class="fa-solid fa-chevron-down" style="font-size:9px;"></i>
+                </div>
+                <div class="sub-links">
+                    <a onclick="filterByTag('Bestseller')">🔥 Bestsellers</a>
+                    <a onclick="openModal('custom-modal')">✨ Wedding Custom Studio</a>
+                    <a onclick="selectCategory('Varmala')">🌸 Varmala Resin</a>
+                    <a onclick="selectCategory('Jootis')">👠 Bridal Jootis</a>
+                    <a onclick="document.getElementById('faq-sec').scrollIntoView()">❓ FAQs &amp; Store Map</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Visual Category Circles -->
+    <div class="cat-circles-wrap">
+        <div class="cat-circles" id="cat-circles-list">
+                <div class="cat-circle-item active" onclick="selectCategory('All')">
+                    <div class="cat-ring"><img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="All Items"></div>
+                    <span>All Items</span>
+                </div>
+            
+                <div class="cat-circle-item " onclick="selectCategory('Varmala')">
+                    <div class="cat-ring"><img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="Varmala Resin"></div>
+                    <span>Varmala Resin</span>
+                </div>
+            
+                <div class="cat-circle-item " onclick="selectCategory('Chunri')">
+                    <div class="cat-ring"><img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="Name Chunri"></div>
+                    <span>Name Chunri</span>
+                </div>
+            
+                <div class="cat-circle-item " onclick="selectCategory('Thali')">
+                    <div class="cat-ring"><img src="https://images.unsplash.com/photo-1583391733958-d15f07011f38?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="Pooja Thali"></div>
+                    <span>Pooja Thali</span>
+                </div>
+            
+                <div class="cat-circle-item " onclick="selectCategory('Platters')">
+                    <div class="cat-ring"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="Ring Platters"></div>
+                    <span>Ring Platters</span>
+                </div>
+            
+                <div class="cat-circle-item " onclick="selectCategory('Lippan')">
+                    <div class="cat-ring"><img src="https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="Lippan Art"></div>
+                    <span>Lippan Art</span>
+                </div>
+            
+                <div class="cat-circle-item " onclick="selectCategory('Resin')">
+                    <div class="cat-ring"><img src="https://images.unsplash.com/photo-1611085583191-a3b181a88401?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="Resin Gifts"></div>
+                    <span>Resin Gifts</span>
+                </div>
+            
+                <div class="cat-circle-item " onclick="selectCategory('Trousseau')">
+                    <div class="cat-ring"><img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="Trousseau"></div>
+                    <span>Trousseau</span>
+                </div>
+            
+                <div class="cat-circle-item " onclick="selectCategory('Jootis')">
+                    <div class="cat-ring"><img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="Bridal Jootis"></div>
+                    <span>Bridal Jootis</span>
+                </div>
+            </div>
+    </div>
+
+    <div class="main-wrap">
+        <!-- Interactive Hero Slider -->
+        <div class="hero-slider" id="hero-slider">
+            <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&amp;fit=crop&amp;w=1000&amp;q=80');">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <span class="slide-badge">💍 Wedding Season Special</span>
+                    <h2>Preserve Your Wedding Varmala Forever in Crystal Resin</h2>
+                    <p>Handcrafted 3D floral preservation frames, custom couple nameplates, and real gold-leaf detailing at Pratibha Handicrafts, Pipraich.</p>
+                    <div class="slide-btns">
+                        <button class="btn-primary" onclick="selectCategory('Varmala')">Explore Varmala Frames <i class="fa-solid fa-arrow-right"></i></button>
+                        <button class="btn-glass" onclick="openModal('custom-modal')">Book Custom Slot</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&amp;fit=crop&amp;w=1000&amp;q=80');">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <span class="slide-badge">✨ Bridal Bestseller</span>
+                    <h2>Custom Couple Name Chunri &amp; Designer Pooja Thalis</h2>
+                    <p>Personalized 'सदा सौभाग्यवती भवः' bridal dupattas, engagement ring platters, and velvet mirror-work Karwa Chauth thali sets.</p>
+                    <div class="slide-btns">
+                        <button class="btn-primary" onclick="selectCategory('Chunri')">Shop Bridal Chunri <i class="fa-solid fa-arrow-right"></i></button>
+                        <button class="btn-glass" onclick="selectCategory('Thali')">View Thali Sets</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?auto=format&amp;fit=crop&amp;w=1000&amp;q=80');">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <span class="slide-badge">🎨 Ethnic Decor &amp; Fashion</span>
+                    <h2>Kutch Lippan Art, Resin Gifts &amp; Punjabi Jootis</h2>
+                    <p>Elevate your home &amp; fusion wardrobe with authentic mud-mirror wall art and double-cushioned Zari embroidered jootis.</p>
+                    <div class="slide-btns">
+                        <button class="btn-primary" onclick="selectCategory('Jootis')">Shop Handcrafted Jootis <i class="fa-solid fa-arrow-right"></i></button>
+                        <button class="btn-glass" onclick="selectCategory('Lippan')">Explore Lippan Art</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-dots">
+                <div class="dot" onclick="goSlide(0)"></div>
+                <div class="dot" onclick="goSlide(1)"></div>
+                <div class="dot active" onclick="goSlide(2)"></div>
+            </div>
+        </div>
+
+        <!-- Flash Deals & Live Coupon Bar -->
+        <div class="deals-strip">
+            <div class="deal-left">
+                <div class="timer-box"><i class="fa-regular fa-clock"></i> <span id="deal-timer">06:41:15</span></div>
+                <div>
+                    <div style="font-size:13px; font-weight:800; color:#78350F;">Festive &amp; Wedding Combo Deals Live!</div>
+                    <div style="font-size:11px; color:#92400E;">Tap any coupon code below to copy &amp; apply in your cart</div>
+                </div>
+            </div>
+            <div class="coupon-chips">
+                <div class="coupon-chip" onclick="copyCoupon('PRATIBHA10')">🏷️ PRATIBHA10 (10% OFF)</div>
+                <div class="coupon-chip" onclick="copyCoupon('SHAADI150')">💍 SHAADI150 (₹150 OFF)</div>
+                <div class="coupon-chip" onclick="copyCoupon('FREESHIP')">🚚 FREESHIP (Free Delivery)</div>
+            </div>
+        </div>
+
+        <!-- Filter & Sort Bar -->
+        <div class="filter-bar" id="catalog-anchor">
+            <div class="filter-pills">
+                <button class="f-pill active" id="fp-all" onclick="setPriceFilter('all', this)">All Prices</button>
+                <button class="f-pill" onclick="setPriceFilter('under500', this)">Under ₹499</button>
+                <button class="f-pill" onclick="setPriceFilter('500to1000', this)">₹500 - ₹999</button>
+                <button class="f-pill" onclick="setPriceFilter('above1000', this)">₹1000+</button>
+                <button class="f-pill" onclick="setPriceFilter('custom', this)">✍️ Customizable</button>
+            </div>
+            <div class="sort-box">
+                <span id="showing-count" style="color:var(--muted);">Showing 10 handcrafted items</span>
+                <select id="sort-select" onchange="renderCatalog()">
+                    <option value="featured">Sort: Featured</option>
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
+                    <option value="disc">Highest Discount</option>
+                    <option value="rating">Customer Rating</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Main Product Grid -->
+        <div class="product-grid" id="product-grid">
+                <div class="p-card">
+                    <div>
+                        <div class="p-img-wrap" onclick="openProductDetail(1)">
+                            <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Royal 3D Resin Varmala Preservation Frame with Couple Name &amp; Gold Flakes" loading="lazy">
+                            <span class="p-badge">Bestseller</span>
+                            <span class="p-custom-tag">✍️ Customizable</span>
+                            <button class="p-wish " onclick="event.stopPropagation(); toggleWishlist(1)">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="p-info">
+                            <div class="p-brand">Varmala • Pratibha Studio</div>
+                            <div class="p-title" onclick="openProductDetail(1)">Royal 3D Resin Varmala Preservation Frame with Couple Name &amp; Gold Flakes</div>
+                            <div class="p-rating">
+                                <span class="rating-pill">4.9 ★</span>
+                                <span style="color:var(--muted);">(164)</span>
+                            </div>
+                            <div class="p-price-row">
+                                <span class="p-price">₹2499</span>
+                                <span class="p-mrp">₹3999</span><span class="p-disc">(38% off)</span>
+                            </div>
+                            <div class="p-ship"><b>FREE Pickup</b> at Pipraich or Home Delivery</div>
+                        </div>
+                    </div>
+                    <div class="p-btns">
+                        <button class="btn-amz-cart" onclick="quickAddToCart(1)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="btn-quick-wa" title="WhatsApp Inquiry" onclick="instantProductWhatsApp(1)"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                </div>
+                <div class="p-card">
+                    <div>
+                        <div class="p-img-wrap" onclick="openProductDetail(2)">
+                            <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Custom Couple Name Embroidered Bridal Chunri ('सदा सौभाग्यवती भवः')" loading="lazy">
+                            <span class="p-badge">Bridal Hit</span>
+                            <span class="p-custom-tag">✍️ Customizable</span>
+                            <button class="p-wish " onclick="event.stopPropagation(); toggleWishlist(2)">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="p-info">
+                            <div class="p-brand">Chunri • Pratibha Studio</div>
+                            <div class="p-title" onclick="openProductDetail(2)">Custom Couple Name Embroidered Bridal Chunri ('सदा सौभाग्यवती भवः')</div>
+                            <div class="p-rating">
+                                <span class="rating-pill">4.9 ★</span>
+                                <span style="color:var(--muted);">(218)</span>
+                            </div>
+                            <div class="p-price-row">
+                                <span class="p-price">₹899</span>
+                                <span class="p-mrp">₹1499</span><span class="p-disc">(40% off)</span>
+                            </div>
+                            <div class="p-ship"><b>FREE Pickup</b> at Pipraich or Home Delivery</div>
+                        </div>
+                    </div>
+                    <div class="p-btns">
+                        <button class="btn-amz-cart" onclick="quickAddToCart(2)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="btn-quick-wa" title="WhatsApp Inquiry" onclick="instantProductWhatsApp(2)"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                </div>
+                <div class="p-card">
+                    <div>
+                        <div class="p-img-wrap" onclick="openProductDetail(3)">
+                            <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Designer Velvet &amp; Mirror-Work Karwa Chauth Pooja Thali Set (6 Pieces)" loading="lazy">
+                            <span class="p-badge">Festive Deal</span>
+                            <span class="p-custom-tag">✍️ Customizable</span>
+                            <button class="p-wish " onclick="event.stopPropagation(); toggleWishlist(3)">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="p-info">
+                            <div class="p-brand">Thali • Pratibha Studio</div>
+                            <div class="p-title" onclick="openProductDetail(3)">Designer Velvet &amp; Mirror-Work Karwa Chauth Pooja Thali Set (6 Pieces)</div>
+                            <div class="p-rating">
+                                <span class="rating-pill">4.8 ★</span>
+                                <span style="color:var(--muted);">(189)</span>
+                            </div>
+                            <div class="p-price-row">
+                                <span class="p-price">₹749</span>
+                                <span class="p-mrp">₹1299</span><span class="p-disc">(42% off)</span>
+                            </div>
+                            <div class="p-ship"><b>FREE Pickup</b> at Pipraich or Home Delivery</div>
+                        </div>
+                    </div>
+                    <div class="p-btns">
+                        <button class="btn-amz-cart" onclick="quickAddToCart(3)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="btn-quick-wa" title="WhatsApp Inquiry" onclick="instantProductWhatsApp(3)"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                </div>
+                <div class="p-card">
+                    <div>
+                        <div class="p-img-wrap" onclick="openProductDetail(4)">
+                            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Luxury Floral &amp; Acrylic Engagement Ring Ceremony Platter with LED" loading="lazy">
+                            <span class="p-badge">Trending</span>
+                            <span class="p-custom-tag">✍️ Customizable</span>
+                            <button class="p-wish " onclick="event.stopPropagation(); toggleWishlist(4)">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="p-info">
+                            <div class="p-brand">Platters • Pratibha Studio</div>
+                            <div class="p-title" onclick="openProductDetail(4)">Luxury Floral &amp; Acrylic Engagement Ring Ceremony Platter with LED</div>
+                            <div class="p-rating">
+                                <span class="rating-pill">4.8 ★</span>
+                                <span style="color:var(--muted);">(94)</span>
+                            </div>
+                            <div class="p-price-row">
+                                <span class="p-price">₹1499</span>
+                                <span class="p-mrp">₹2299</span><span class="p-disc">(35% off)</span>
+                            </div>
+                            <div class="p-ship"><b>FREE Pickup</b> at Pipraich or Home Delivery</div>
+                        </div>
+                    </div>
+                    <div class="p-btns">
+                        <button class="btn-amz-cart" onclick="quickAddToCart(4)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="btn-quick-wa" title="WhatsApp Inquiry" onclick="instantProductWhatsApp(4)"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                </div>
+                <div class="p-card">
+                    <div>
+                        <div class="p-img-wrap" onclick="openProductDetail(5)">
+                            <img src="https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Authentic Kutch Lippan Mud &amp; Mirror Mandala Wall Art (18 Inch)" loading="lazy">
+                            <span class="p-badge">Handmade</span>
+                            <span class="p-custom-tag">✍️ Customizable</span>
+                            <button class="p-wish " onclick="event.stopPropagation(); toggleWishlist(5)">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="p-info">
+                            <div class="p-brand">Lippan • Pratibha Studio</div>
+                            <div class="p-title" onclick="openProductDetail(5)">Authentic Kutch Lippan Mud &amp; Mirror Mandala Wall Art (18 Inch)</div>
+                            <div class="p-rating">
+                                <span class="rating-pill">4.9 ★</span>
+                                <span style="color:var(--muted);">(76)</span>
+                            </div>
+                            <div class="p-price-row">
+                                <span class="p-price">₹1199</span>
+                                <span class="p-mrp">₹1899</span><span class="p-disc">(37% off)</span>
+                            </div>
+                            <div class="p-ship"><b>FREE Pickup</b> at Pipraich or Home Delivery</div>
+                        </div>
+                    </div>
+                    <div class="p-btns">
+                        <button class="btn-amz-cart" onclick="quickAddToCart(5)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="btn-quick-wa" title="WhatsApp Inquiry" onclick="instantProductWhatsApp(5)"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                </div>
+                <div class="p-card">
+                    <div>
+                        <div class="p-img-wrap" onclick="openProductDetail(6)">
+                            <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Hand-Embroidered Zari &amp; Mirror Work Punjabi Bridal Jootis" loading="lazy">
+                            <span class="p-badge">New Arrival</span>
+                            
+                            <button class="p-wish " onclick="event.stopPropagation(); toggleWishlist(6)">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="p-info">
+                            <div class="p-brand">Jootis • Pratibha Studio</div>
+                            <div class="p-title" onclick="openProductDetail(6)">Hand-Embroidered Zari &amp; Mirror Work Punjabi Bridal Jootis</div>
+                            <div class="p-rating">
+                                <span class="rating-pill">4.8 ★</span>
+                                <span style="color:var(--muted);">(145)</span>
+                            </div>
+                            <div class="p-price-row">
+                                <span class="p-price">₹999</span>
+                                <span class="p-mrp">₹1599</span><span class="p-disc">(38% off)</span>
+                            </div>
+                            <div class="p-ship"><b>FREE Pickup</b> at Pipraich or Home Delivery</div>
+                        </div>
+                    </div>
+                    <div class="p-btns">
+                        <button class="btn-amz-cart" onclick="quickAddToCart(6)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="btn-quick-wa" title="WhatsApp Inquiry" onclick="instantProductWhatsApp(6)"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                </div>
+                <div class="p-card">
+                    <div>
+                        <div class="p-img-wrap" onclick="openProductDetail(7)">
+                            <img src="https://images.unsplash.com/photo-1611085583191-a3b181a88401?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Personalized Floral &amp; Gold Foil Resin Alphabet Keychain with Tassel" loading="lazy">
+                            <span class="p-badge">Pocket Friendly</span>
+                            <span class="p-custom-tag">✍️ Customizable</span>
+                            <button class="p-wish " onclick="event.stopPropagation(); toggleWishlist(7)">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="p-info">
+                            <div class="p-brand">Resin • Pratibha Studio</div>
+                            <div class="p-title" onclick="openProductDetail(7)">Personalized Floral &amp; Gold Foil Resin Alphabet Keychain with Tassel</div>
+                            <div class="p-rating">
+                                <span class="rating-pill">4.7 ★</span>
+                                <span style="color:var(--muted);">(312)</span>
+                            </div>
+                            <div class="p-price-row">
+                                <span class="p-price">₹199</span>
+                                <span class="p-mrp">₹349</span><span class="p-disc">(43% off)</span>
+                            </div>
+                            <div class="p-ship"><b>FREE Pickup</b> at Pipraich or Home Delivery</div>
+                        </div>
+                    </div>
+                    <div class="p-btns">
+                        <button class="btn-amz-cart" onclick="quickAddToCart(7)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="btn-quick-wa" title="WhatsApp Inquiry" onclick="instantProductWhatsApp(7)"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                </div>
+                <div class="p-card">
+                    <div>
+                        <div class="p-img-wrap" onclick="openProductDetail(8)">
+                            <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Royal Bridal Trousseau Saree &amp; Suit Packing Basket Hamper" loading="lazy">
+                            <span class="p-badge">Wedding Prep</span>
+                            <span class="p-custom-tag">✍️ Customizable</span>
+                            <button class="p-wish " onclick="event.stopPropagation(); toggleWishlist(8)">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="p-info">
+                            <div class="p-brand">Trousseau • Pratibha Studio</div>
+                            <div class="p-title" onclick="openProductDetail(8)">Royal Bridal Trousseau Saree &amp; Suit Packing Basket Hamper</div>
+                            <div class="p-rating">
+                                <span class="rating-pill">4.8 ★</span>
+                                <span style="color:var(--muted);">(68)</span>
+                            </div>
+                            <div class="p-price-row">
+                                <span class="p-price">₹649</span>
+                                <span class="p-mrp">₹999</span><span class="p-disc">(35% off)</span>
+                            </div>
+                            <div class="p-ship"><b>FREE Pickup</b> at Pipraich or Home Delivery</div>
+                        </div>
+                    </div>
+                    <div class="p-btns">
+                        <button class="btn-amz-cart" onclick="quickAddToCart(8)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="btn-quick-wa" title="WhatsApp Inquiry" onclick="instantProductWhatsApp(8)"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                </div>
+                <div class="p-card">
+                    <div>
+                        <div class="p-img-wrap" onclick="openProductDetail(9)">
+                            <img src="https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Resin Varmala Preservation Wall Clock with Roman Numerals (14 Inch)" loading="lazy">
+                            <span class="p-badge">Luxury Edition</span>
+                            <span class="p-custom-tag">✍️ Customizable</span>
+                            <button class="p-wish " onclick="event.stopPropagation(); toggleWishlist(9)">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="p-info">
+                            <div class="p-brand">Varmala • Pratibha Studio</div>
+                            <div class="p-title" onclick="openProductDetail(9)">Resin Varmala Preservation Wall Clock with Roman Numerals (14 Inch)</div>
+                            <div class="p-rating">
+                                <span class="rating-pill">5 ★</span>
+                                <span style="color:var(--muted);">(52)</span>
+                            </div>
+                            <div class="p-price-row">
+                                <span class="p-price">₹2999</span>
+                                <span class="p-mrp">₹4499</span><span class="p-disc">(33% off)</span>
+                            </div>
+                            <div class="p-ship"><b>FREE Pickup</b> at Pipraich or Home Delivery</div>
+                        </div>
+                    </div>
+                    <div class="p-btns">
+                        <button class="btn-amz-cart" onclick="quickAddToCart(9)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="btn-quick-wa" title="WhatsApp Inquiry" onclick="instantProductWhatsApp(9)"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                </div>
+                <div class="p-card">
+                    <div>
+                        <div class="p-img-wrap" onclick="openProductDetail(10)">
+                            <img src="https://images.unsplash.com/photo-1583391733958-d15f07011f38?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Handcrafted Haldi &amp; Mehndi Floral Platter Set with Bowl &amp; Kalire" loading="lazy">
+                            <span class="p-badge">Haldi Special</span>
+                            <span class="p-custom-tag">✍️ Customizable</span>
+                            <button class="p-wish " onclick="event.stopPropagation(); toggleWishlist(10)">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="p-info">
+                            <div class="p-brand">Platters • Pratibha Studio</div>
+                            <div class="p-title" onclick="openProductDetail(10)">Handcrafted Haldi &amp; Mehndi Floral Platter Set with Bowl &amp; Kalire</div>
+                            <div class="p-rating">
+                                <span class="rating-pill">4.8 ★</span>
+                                <span style="color:var(--muted);">(83)</span>
+                            </div>
+                            <div class="p-price-row">
+                                <span class="p-price">₹849</span>
+                                <span class="p-mrp">₹1399</span><span class="p-disc">(39% off)</span>
+                            </div>
+                            <div class="p-ship"><b>FREE Pickup</b> at Pipraich or Home Delivery</div>
+                        </div>
+                    </div>
+                    <div class="p-btns">
+                        <button class="btn-amz-cart" onclick="quickAddToCart(10)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="btn-quick-wa" title="WhatsApp Inquiry" onclick="instantProductWhatsApp(10)"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                </div></div>
+
+        <!-- Bespoke Custom Order Banner -->
+        <div class="studio-card">
+            <div>
+                <span style="background:var(--royal); color:#FDE68A; font-size:10px; font-weight:800; padding:4px 10px; border-radius:99px; text-transform:uppercase;">Bespoke Customization Studio</span>
+                <h3 style="font-family:'Playfair Display',serif; font-size:24px; color:var(--royal); margin:8px 0;">Have a Custom Wedding Design in Mind?</h3>
+                <p style="font-size:13px; color:#4B5563; line-height:1.5; margin-bottom:14px;">
+                    Whether you want your actual wedding Varmala preserved inside a 16-inch resin clock, a custom bride &amp; groom name embroidered on a velvet Chunri, or 25 matching Trousseau saree packing baskets—we handcraft every piece to your exact theme.
+                </p>
+                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-primary" style="background:var(--royal); color:#fff;" onclick="openModal('custom-modal')"><i class="fa-solid fa-wand-magic-sparkles"></i> Open Custom Order Builder</button>
+                    <button class="btn-primary" style="background:var(--wa); color:#fff;" onclick="directWhatsAppChat()"><i class="fa-brands fa-whatsapp"></i> Chat Directly on WhatsApp</button>
+                </div>
+            </div>
+            <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:10px; text-align:center;">
+                <div style="background:#fff; padding:12px; border-radius:10px; border:1px solid var(--border);">
+                    <i class="fa-solid fa-gem" style="font-size:22px; color:var(--royal); margin-bottom:6px;"></i>
+                    <div style="font-size:13px; font-weight:800;">A-Grade Resin</div>
+                    <div style="font-size:11px; color:var(--muted);">Non-yellowing UV coat</div>
+                </div>
+                <div style="background:#fff; padding:12px; border-radius:10px; border:1px solid var(--border);">
+                    <i class="fa-solid fa-pen-fancy" style="font-size:22px; color:var(--royal); margin-bottom:6px;"></i>
+                    <div style="font-size:13px; font-weight:800;">Name Embroidery</div>
+                    <div style="font-size:11px; color:var(--muted);">Hindi &amp; English scripts</div>
+                </div>
+                <div style="background:#fff; padding:12px; border-radius:10px; border:1px solid var(--border);">
+                    <i class="fa-solid fa-gift" style="font-size:22px; color:var(--royal); margin-bottom:6px;"></i>
+                    <div style="font-size:13px; font-weight:800;">Bulk Trousseau</div>
+                    <div style="font-size:11px; color:var(--muted);">Special wedding packages</div>
+                </div>
+                <div style="background:#fff; padding:12px; border-radius:10px; border:1px solid var(--border);">
+                    <i class="fa-solid fa-store" style="font-size:22px; color:var(--royal); margin-bottom:6px;"></i>
+                    <div style="font-size:13px; font-weight:800;">Pipraich Store</div>
+                    <div style="font-size:11px; color:var(--muted);">Easy pickup &amp; preview</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Frequently Asked Questions & Store Details -->
+        <div id="faq-sec" style="margin-top:24px;">
+            <h3 style="font-family:'Playfair Display',serif; font-size:20px; margin-bottom:12px; color:var(--royal);">Frequently Asked Questions (FAQs)</h3>
+            <div class="faq-item open" onclick="this.classList.toggle('open')">
+                <div class="faq-q"><span>1. How do I send my wedding Varmala flowers for Resin Preservation?</span><i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-a">You can drop off your Varmala directly at our shop near Vijay Chowk, Pipraich, Gorakhpur, or send it via local courier. We scientifically dry the petals in silica gel before casting them in crystal-clear epoxy resin.</div>
+            </div>
+            <div class="faq-item" onclick="this.classList.toggle('open')">
+                <div class="faq-q"><span>2. How many days does a Custom Name Bridal Chunri or Ring Platter take?</span><i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-a">Custom Name Chunris and Engagement Ring Platters are typically ready within 2 to 4 days. Urgent same-day or next-day express preparation is also available on request!</div>
+            </div>
+            <div class="faq-item" onclick="this.classList.toggle('open')">
+                <div class="faq-q"><span>3. How do I pay for my order? Is Cash on Pick-up available?</span><i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-a">Yes! When you place an order here, your complete itemized bill is sent to our official WhatsApp and saved in your 'My Orders' tab. You can pay via UPI (GPay/PhonePe) or Cash on Store Pickup at Pipraich.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rich Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Pratibha Handicrafts (प्रतिभा हैंडीक्राफ्ट्स)</h4>
+                <p>Gorakhpur's premier handmade wedding &amp; artisanal craft studio. Specializing in Resin Varmala Preservation, Custom Bridal Chunri, Karwa Chauth Thalis, Kutch Lippan Art, Trousseau Packing &amp; Ethnic Jootis.</p>
+                <div style="margin-top:10px; display:flex; gap:8px;">
+                    <button class="btn-primary" onclick="directWhatsAppChat()"><i class="fa-brands fa-whatsapp"></i> WhatsApp Store</button>
+                    <button class="btn-glass" onclick="openAdminAuth()"><i class="fa-solid fa-lock"></i> Owner Admin</button>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Top Categories</h4>
+                <ul>
+                    <li onclick="selectCategory('Varmala')" style="cursor:pointer;">• Varmala Preservation</li>
+                    <li onclick="selectCategory('Chunri')" style="cursor:pointer;">• Custom Name Chunri</li>
+                    <li onclick="selectCategory('Thali')" style="cursor:pointer;">• Karwa Chauth Thali Sets</li>
+                    <li onclick="selectCategory('Platters')" style="cursor:pointer;">• Engagement Ring Platters</li>
+                    <li onclick="selectCategory('Jootis')" style="cursor:pointer;">• Handcrafted Bridal Jootis</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li onclick="openModal('orders-modal')" style="cursor:pointer;">• Your Orders &amp; Invoices</li>
+                    <li onclick="openModal('custom-modal')" style="cursor:pointer;">• Custom Design Studio</li>
+                    <li onclick="openModal('pincode-modal')" style="cursor:pointer;">• Gorakhpur Delivery Check</li>
+                    <li onclick="copyCoupon('PRATIBHA10')" style="cursor:pointer;">• Apply Coupon PRATIBHA10</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Visit Our Store</h4>
+                <p><i class="fa-solid fa-location-dot" style="color:var(--gold);"></i> Vijay Chowk,<br>Pipraich, Gorakhpur, UP — 273152</p>
+                <p style="margin-top:6px;"><i class="fa-regular fa-clock" style="color:var(--gold);"></i> Open Daily: 10:00 AM – 8:30 PM</p>
+            </div>
+        </div>
+        <div style="text-align:center; font-size:11px; color:#9CA3AF; padding-top:16px;">
+            © 2026 Pratibha Handicrafts (प्रतिभा हैंडीक्राफ्ट्स), Pipraich, Gorakhpur. 100% Firebase Cloud Synced.
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom App Bar -->
+    <nav class="bottom-bar">
+        <button class="b-tab active" onclick="resetAllFilters()"><i class="fa-solid fa-house"></i><span>Home</span></button>
+        <button class="b-tab" onclick="openModal('custom-modal')"><i class="fa-solid fa-wand-magic-sparkles"></i><span>Customize</span></button>
+        <button class="b-tab" onclick="openModal('orders-modal')"><i class="fa-solid fa-box-open"></i><span>Orders</span></button>
+        <button class="b-tab" onclick="openModal('cart-modal')">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Cart</span>
+            <span class="count-pill" id="badge-cart-mob" style="top:-2px; right:10px;">0</span>
+        </button>
+        <button class="b-tab" onclick="openAdminAuth()"><i class="fa-solid fa-user-shield"></i><span>Admin</span></button>
+    </nav>
+
+    <!-- ================= MODALS & DRAWERS ================= -->
+
+    <!-- 1. PRODUCT DETAIL MODAL -->
+    <div class="modal-bg" id="detail-modal" onclick="bgClose(event, 'detail-modal')">
+        <div class="modal-box">
+            <div class="modal-hdr">
+                <span id="dt-cat" style="font-size:11px; font-weight:800; color:var(--royal); text-transform:uppercase;">CATEGORY</span>
+                <button class="close-x" onclick="closeModal('detail-modal')"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="pd-gallery">
+                    <img id="dt-img" src="" alt="">
+                </div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+                    <span class="rating-pill" id="dt-rating">4.9 ★</span>
+                    <span style="font-size:11px; color:var(--green); font-weight:700;"><i class="fa-solid fa-circle-check"></i> In Stock at Pipraich Store</span>
+                </div>
+                <h2 id="dt-title" style="font-size:17px; font-weight:800; line-height:1.35; margin-bottom:6px;"></h2>
+                <div class="p-price-row" style="margin-bottom:10px;">
+                    <span class="p-price" style="font-size:24px;" id="dt-price"></span>
+                    <span class="p-mrp" style="font-size:13px;" id="dt-mrp"></span>
+                    <span class="p-disc" style="font-size:13px;" id="dt-disc"></span>
+                </div>
+
+                <!-- Variant / Size Selector -->
+                <div id="dt-variants-wrap">
+                    <label style="font-size:12px; font-weight:700; color:var(--text);">Select Size / Option:</label>
+                    <div class="variant-pills" id="dt-variants"></div>
+                </div>
+
+                <!-- Custom Personalization Input -->
+                <div class="inp-group" style="background:var(--gold-soft); padding:10px; border-radius:8px; border:1px solid var(--gold);">
+                    <label><i class="fa-solid fa-pen-nib"></i> Personalization / Couple Name / Color Note (Optional):</label>
+                    <input type="text" id="dt-custom-note" placeholder="e.g. Write 'Rohan &amp; Anjali - 24 Nov' or Red &amp; Gold theme">
+                </div>
+
+                <p id="dt-desc" style="font-size:13px; color:#374151; line-height:1.55; margin-bottom:12px;"></p>
+
+                <table class="spec-table">
+                    <tbody><tr><td>Brand / Studio</td><td>Pratibha Handicrafts (प्रतिभा हैंडीक्राफ्ट्स)</td></tr>
+                    <tr><td>Material</td><td id="dt-mat">Handcrafted Premium Grade</td></tr>
+                    <tr><td>Preparation Time</td><td id="dt-prep">2 - 3 Days (Express Available)</td></tr>
+                    <tr><td>Pickup / Delivery</td><td>Free Pickup at Vijay Chowk, Pipraich or Home Delivery</td></tr>
+                </tbody></table>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px;">
+                    <button class="btn-amz-cart" style="padding:12px; font-size:13px;" id="dt-btn-cart"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                    <button class="btn-amz-cart" style="background:var(--amz-orange); border-color:#F59E0B; padding:12px; font-size:13px;" id="dt-btn-buy"><i class="fa-solid fa-bolt"></i> Buy Now</button>
+                </div>
+
+                <!-- Customer Reviews Inside Product Modal -->
+                <div style="margin-top:20px; border-top:1px solid var(--border); padding-top:14px;">
+                    <h4 style="font-size:14px; font-weight:800; margin-bottom:10px;">Verified Customer Reviews</h4>
+                    <div id="dt-reviews-list"></div>
+                    <div style="background:#F9FAFB; padding:10px; border-radius:8px; margin-top:10px; border:1px solid var(--border);">
+                        <div style="font-size:12px; font-weight:700; margin-bottom:6px;">Write a Product Review</div>
+                        <div style="display:grid; grid-template-columns:1fr 90px; gap:6px; margin-bottom:6px;">
+                            <input type="text" id="rev-user" placeholder="Your Name" style="padding:7px; border:1px solid var(--border); border-radius:6px; font-size:12px;">
+                            <select id="rev-star" style="padding:7px; border:1px solid var(--border); border-radius:6px; font-size:12px;">
+                                <option value="5">5 ★ Best</option>
+                                <option value="4">4 ★ Good</option>
+                                <option value="3">3 ★ Avg</option>
+                            </select>
+                        </div>
+                        <input type="text" id="rev-comment" placeholder="Share your experience with this product..." style="width:100%; padding:7px; border:1px solid var(--border); border-radius:6px; font-size:12px; margin-bottom:6px;">
+                        <button class="btn-primary" style="padding:6px 12px; font-size:11px;" onclick="submitProductReview()">Post Review</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. SHOPPING CART & CHECKOUT MODAL -->
+    <div class="modal-bg" id="cart-modal" onclick="bgClose(event, 'cart-modal')">
+        <div class="modal-box">
+            <div class="modal-hdr">
+                <h3><i class="fa-solid fa-bag-shopping" style="color:var(--royal);"></i> Your Shopping Cart (<span id="cart-hdr-count">0</span>)</h3>
+                <button class="close-x" onclick="closeModal('cart-modal')"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <div id="cart-items-box"></div>
+
+                <div id="cart-checkout-section">
+                    <!-- Coupon Bar -->
+                    <div style="display:flex; gap:8px; margin-top:12px;">
+                        <input type="text" id="coupon-inp" placeholder="Enter Coupon (e.g. PRATIBHA10)" style="flex:1; padding:9px 12px; border:1px solid var(--border); border-radius:8px; font-size:12px; text-transform:uppercase;">
+                        <button class="btn-primary" onclick="applyCouponCode()">Apply</button>
+                    </div>
+
+                    <!-- Bill Summary -->
+                    <div class="bill-box">
+                        <div class="bill-line"><span>Items Subtotal (MRP):</span><span id="bill-mrp">₹0</span></div>
+                        <div class="bill-line" style="color:var(--green);"><span>Product Discount:</span><span id="bill-disc">-₹0</span></div>
+                        <div class="bill-line" style="color:var(--green);"><span>Coupon Discount (<span id="bill-cpn-name">None</span>):</span><span id="bill-cpn">-₹0</span></div>
+                        <div class="bill-line"><span>Delivery / Pickup:</span><span id="bill-ship" style="color:var(--green); font-weight:700;">FREE</span></div>
+                        <div class="bill-total"><span>Total Payable Amount:</span><span id="bill-final">₹0</span></div>
+                    </div>
+
+                    <!-- Customer Details Form -->
+                    <h4 style="font-size:13px; font-weight:800; margin-bottom:8px;">Delivery &amp; Contact Details</h4>
+                    <div class="inp-group">
+                        <label>Full Name *</label>
+                        <input type="text" id="ord-name" placeholder="Enter your name">
+                    </div>
+                    <div class="inp-group">
+                        <label>Phone Number *</label>
+                        <input type="tel" id="ord-phone" placeholder="10-digit mobile number">
+                    </div>
+                    <div class="inp-group">
+                        <label>Delivery Method *</label>
+                        <select id="ord-mode" onchange="renderCart()">
+                            <option value="Store Pickup (Vijay Chowk, Pipraich)">Store Pickup at Vijay Chowk, Pipraich (FREE)</option>
+                            <option value="Home Delivery (Gorakhpur)">Home Delivery in Gorakhpur (Free above ₹999, else ₹49)</option>
+                        </select>
+                    </div>
+                    <div class="inp-group">
+                        <label>Complete Address / Landmark *</label>
+                        <input type="text" id="ord-addr" placeholder="House No, Street, Area (or write 'Store Pickup')">
+                    </div>
+                    <div class="inp-group">
+                        <label>Payment Preference</label>
+                        <select id="ord-pay">
+                            <option value="UPI / QR on WhatsApp">UPI (GPay / PhonePe / Paytm)</option>
+                            <option value="Cash on Store Pickup / Delivery">Cash on Pickup / Delivery</option>
+                        </select>
+                    </div>
+
+                    <button onclick="completeOrder('whatsapp')" style="width:100%; background:var(--wa); color:#fff; border:none; padding:13px; border-radius:10px; font-size:14px; font-weight:800; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px; margin-bottom:8px;">
+                        <i class="fa-brands fa-whatsapp" style="font-size:18px;"></i> Place Order &amp; Send Bill on WhatsApp
+                    </button>
+                    <button onclick="completeOrder('invoice')" style="width:100%; background:var(--royal); color:#fff; border:none; padding:11px; border-radius:10px; font-size:13px; font-weight:700; cursor:pointer;">
+                        <i class="fa-solid fa-file-invoice"></i> Save Order &amp; Download Receipt
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. WISHLIST MODAL -->
+    <div class="modal-bg" id="wish-modal" onclick="bgClose(event, 'wish-modal')">
+        <div class="modal-box">
+            <div class="modal-hdr">
+                <h3><i class="fa-solid fa-heart" style="color:#E11D48;"></i> Saved Wishlist</h3>
+                <button class="close-x" onclick="closeModal('wish-modal')"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body" id="wish-items-box"></div>
+        </div>
+    </div>
+
+    <!-- 4. MY ORDERS & INVOICE HISTORY MODAL -->
+    <div class="modal-bg" id="orders-modal" onclick="bgClose(event, 'orders-modal')">
+        <div class="modal-box">
+            <div class="modal-hdr">
+                <h3><i class="fa-solid fa-box-open" style="color:var(--royal);"></i> Your Orders &amp; Receipts</h3>
+                <button class="close-x" onclick="closeModal('orders-modal')"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body" id="orders-history-box"></div>
+        </div>
+    </div>
+
+    <!-- 5. CUSTOM WEDDING ORDER BUILDER MODAL -->
+    <div class="modal-bg" id="custom-modal" onclick="bgClose(event, 'custom-modal')">
+        <div class="modal-box">
+            <div class="modal-hdr">
+                <h3>✨ Bespoke Wedding &amp; Craft Customizer</h3>
+                <button class="close-x" onclick="closeModal('custom-modal')"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <form onsubmit="submitBespokeForm(event)">
+                    <div class="inp-group">
+                        <label>Your Name &amp; Mobile Number *</label>
+                        <input type="text" id="cf-name" required="" placeholder="e.g. Priya Verma - 98765XXXXX">
+                    </div>
+                    <div class="inp-group">
+                        <label>Select Craft Category *</label>
+                        <select id="cf-cat">
+                            <option>Resin Varmala Preservation (12x12 / 16x16 / Clock)</option>
+                            <option>Custom Couple Name Bridal Chunri</option>
+                            <option>Karwa Chauth / Engagement Decorated Thali</option>
+                            <option>Customized Ring Ceremony Platter</option>
+                            <option>Trousseau &amp; Saree Packing Hampers (Bulk)</option>
+                            <option>Kutch Lippan Mud &amp; Mirror Wall Art</option>
+                            <option>Personalized Resin Keyrings / Nameplate</option>
+                            <option>Hand-Embroidered Bridal Jootis</option>
+                        </select>
+                    </div>
+                    <div class="inp-group">
+                        <label>Bride &amp; Groom Names / Custom Hindi or English Text</label>
+                        <input type="text" id="cf-text" placeholder="e.g. आयुष्मान भवः • शुभ विवाह राहुल संग प्रिया">
+                    </div>
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+                        <div class="inp-group">
+                            <label>Preferred Color Theme</label>
+                            <select id="cf-theme">
+                                <option>Royal Maroon &amp; Gold</option>
+                                <option>Pastel Rose &amp; Pearl</option>
+                                <option>Ivory White &amp; Gold Flakes</option>
+                                <option>Bridal Crimson Red</option>
+                                <option>Multicolor Festive</option>
+                            </select>
+                        </div>
+                        <div class="inp-group">
+                            <label>Event / Delivery Date</label>
+                            <input type="date" id="cf-date">
+                        </div>
+                    </div>
+                    <div class="inp-group">
+                        <label>Special Instructions / Size / Budget</label>
+                        <textarea id="cf-notes" rows="3" placeholder="Describe how you want your gift customized..."></textarea>
+                    </div>
+                    <button type="submit" style="width:100%; background:var(--wa); color:#fff; border:none; padding:13px; border-radius:10px; font-weight:800; font-size:14px; cursor:pointer;">
+                        <i class="fa-brands fa-whatsapp"></i> Send Custom Request to Pratibha Handicrafts
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. PINCODE / DELIVERY CHECKER MODAL -->
+    <div class="modal-bg" id="pincode-modal" onclick="bgClose(event, 'pincode-modal')">
+        <div class="modal-box" style="max-width:420px;">
+            <div class="modal-hdr">
+                <h3>📍 Choose Delivery Location</h3>
+                <button class="close-x" onclick="closeModal('pincode-modal')"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <p style="font-size:12px; color:var(--muted); margin-bottom:10px;">Enter your Gorakhpur / UP pincode or select quick area:</p>
+                <div style="display:flex; gap:8px; margin-bottom:12px;">
+                    <input type="text" id="pin-input" placeholder="e.g. 273152 (Pipraich)" style="flex:1; padding:10px; border:1px solid var(--border); border-radius:8px;">
+                    <button class="btn-primary" onclick="updateLocation()">Apply</button>
+                </div>
+                <div style="display:flex; flex-direction:column; gap:6px;">
+                    <button class="f-pill" style="text-align:left; padding:10px;" onclick="setQuickLoc('Pipraich, Gorakhpur 273152 (Same-Day Pickup)')">🏪 Pipraich, Vijay Chowk — 273152 (Free Store Pickup)</button>
+                    <button class="f-pill" style="text-align:left; padding:10px;" onclick="setQuickLoc('Gorakhpur City 273001 (1-2 Days Delivery)')">🚚 Gorakhpur City — 273001 (Fast Delivery)</button>
+                    <button class="f-pill" style="text-align:left; padding:10px;" onclick="setQuickLoc('Medical College Road 273013 (1-2 Days)')">🚚 Medical College / Padri Bazar — 273013</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. CUSTOM OWNER LOGIN MODAL -->
+    <div class="modal-bg" id="admin-login-modal" onclick="bgClose(event, 'admin-login-modal')">
+        <div class="modal-box" style="max-width:400px;">
+            <div class="modal-hdr">
+                <h3>🔒 Shop Owner Login</h3>
+                <button class="close-x" onclick="closeModal('admin-login-modal')"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <form onsubmit="verifyAdminLogin(event)">
+                    <div class="inp-group">
+                        <label>Enter Admin Password (Default: pratibha123)</label>
+                        <input type="password" id="adm-pass-inp" required="" placeholder="Enter password...">
+                    </div>
+                    <p id="adm-login-err" style="color:var(--danger); font-size:12px; font-weight:700; display:none; margin-bottom:8px;">Incorrect password! Default is: pratibha123</p>
+                    <button type="submit" class="btn-primary" style="width:100%; justify-content:center; padding:12px; background:var(--royal); color:#fff;">Unlock Cloud Admin Dashboard</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 8. FULL OWNER ADMIN CONTROL CENTER MODAL (FIREBASE CLOUD SYNCED + HTML EXPORT) -->
+    <div class="modal-bg" id="admin-panel-modal" onclick="bgClose(event, 'admin-panel-modal')">
+        <div class="modal-box" style="max-width:720px;">
+            <div class="modal-hdr" style="background:var(--royal); color:#fff;">
+                <div>
+                    <h3 style="color:#FDE68A;">👑 Pratibha Handicrafts — Cloud Admin</h3>
+                    <span style="font-size:11px; color:#F3E5AB;">Connected to Firebase Realtime Database (Auto-Syncs Live)</span>
+                </div>
+                <button class="close-x" onclick="closeModal('admin-panel-modal')"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <!-- Cloud Sync Status Banner -->
+                <div style="background:#ECFDF5; border:1.5px solid #10B981; border-radius:10px; padding:12px; margin-bottom:14px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
+                    <div>
+                        <div style="font-size:13px; font-weight:800; color:#065F46;"><i class="fa-solid fa-cloud-arrow-up"></i> Auto Cloud Sync Active</div>
+                        <div style="font-size:11px; color:#047857;">Every change saves to Firebase Cloud immediately &amp; updates across all customer phones!</div>
+                    </div>
+                    <div style="display:flex; gap:6px; flex-wrap:wrap;">
+                        <button class="btn-primary" style="background:#059669; color:#fff;" onclick="syncToCloudNow()"><i class="fa-solid fa-rotate"></i> Sync Cloud</button>
+                        <button class="btn-primary" style="background:var(--royal); color:#fff;" onclick="exportFullStoreHTML()"><i class="fa-solid fa-download"></i> Export HTML</button>
+                    </div>
+                </div>
+
+                <!-- Admin Navigation Tabs -->
+                <div style="display:flex; gap:6px; margin-bottom:14px; overflow-x:auto;">
+                    <button class="f-pill" id="atab-btn-add" onclick="switchAdmTab('add')">➕ Add / Edit Product</button>
+                    <button class="f-pill" id="atab-btn-list" onclick="switchAdmTab('list')">📦 All Products (<span id="adm-prod-count">10</span>)</button>
+                    <button class="f-pill active" id="atab-btn-set" onclick="switchAdmTab('set')">⚙️ Shop &amp; WhatsApp Settings</button>
+                </div>
+
+                <!-- Admin Tab 1: Add / Edit Product -->
+                <div id="adm-tab-add" style="display: none;">
+                    <form onsubmit="saveProductFromAdmin(event)" style="background:#F9FAFB; padding:14px; border-radius:12px; border:1px solid var(--border);">
+                        <h4 id="adm-form-hdr" style="font-size:14px; color:var(--royal); margin-bottom:10px;">+ Add New Handcrafted Product</h4>
+                        <input type="hidden" id="ap-id">
+                        <div class="inp-group">
+                            <label>Product Title *</label>
+                            <input type="text" id="ap-title" required="" placeholder="e.g. Royal Resin Varmala Clock Frame (14 Inch)">
+                        </div>
+                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+                            <div class="inp-group">
+                                <label>Selling Price (₹) *</label>
+                                <input type="number" id="ap-price" required="" placeholder="1999">
+                            </div>
+                            <div class="inp-group">
+                                <label>Original MRP (₹) *</label>
+                                <input type="number" id="ap-mrp" required="" placeholder="2999">
+                            </div>
+                        </div>
+                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+                            <div class="inp-group">
+                                <label>Category *</label>
+                                <select id="ap-cat">
+                                    <option value="Varmala">Varmala</option>
+                                    <option value="Chunri">Chunri</option>
+                                    <option value="Thali">Thali</option>
+                                    <option value="Platters">Platters</option>
+                                    <option value="Lippan">Lippan</option>
+                                    <option value="Resin">Resin</option>
+                                    <option value="Trousseau">Trousseau</option>
+                                    <option value="Jootis">Jootis</option>
+                                </select>
+                            </div>
+                            <div class="inp-group">
+                                <label>Badge Tag</label>
+                                <input type="text" id="ap-badge" value="Bestseller" placeholder="Bestseller / New / Deal">
+                            </div>
+                        </div>
+                        <div class="inp-group">
+                            <label>Sizes / Options (Comma separated)</label>
+                            <input type="text" id="ap-sizes" value="Standard, Medium, Large" placeholder="e.g. 8x8 Inch, 12x12 Inch, 16x16 Inch">
+                        </div>
+                        <div class="inp-group" style="background:#fff; padding:10px; border-radius:8px; border:1px dashed var(--royal);">
+                            <label>📸 Choose Product Photo from Phone Gallery (Auto-Compressed):</label>
+                            <input type="file" accept="image/*" onchange="compressGalleryPhoto(event)" style="margin-bottom:6px;">
+                            <input type="text" id="ap-img" required="" placeholder="Or paste Image URL here...">
+                        </div>
+                        <div class="inp-group">
+                            <label>Full Product Description &amp; Material Details *</label>
+                            <textarea id="ap-desc" rows="3" required="" placeholder="Describe the craftsmanship, material, and customization options..."></textarea>
+                        </div>
+                        <div style="display:flex; gap:8px;">
+                            <button type="submit" class="btn-primary" style="flex:1; justify-content:center; background:var(--royal); color:#fff; padding:11px;" id="ap-submit-btn">Save to Cloud Store</button>
+                            <button type="button" class="f-pill" onclick="resetAdminProductForm()">Clear</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Admin Tab 2: Manage Existing Products -->
+                <div id="adm-tab-list" style="display:none;">
+                    <div id="adm-products-container">
+                <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px; border:1px solid var(--border); border-radius:10px; margin-bottom:8px; background:#fff;">
+                    <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&amp;fit=crop&amp;w=700&amp;q=80" style="width:50px; height:50px; border-radius:8px; object-fit:cover;">
+                    <div style="flex:1; min-width:0;">
+                        <div style="font-size:12px; font-weight:800; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Royal 3D Resin Varmala Preservation Frame with Couple Name &amp; Gold Flakes</div>
+                        <div style="font-size:12px; color:var(--royal); font-weight:700;">₹2499</div>
+                    </div>
+                    <div style="display:flex; gap:6px;">
+                        <button class="f-pill" style="background:#DBEAFE; color:#1E40AF; border:none;" onclick="loadProductIntoAdmin(1)">Edit</button>
+                        <button class="f-pill" style="background:#FEE2E2; color:#991B1B; border:none;" onclick="removeProductFromAdmin(1)">Del</button>
+                    </div>
+                </div>
+            
+                <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px; border:1px solid var(--border); border-radius:10px; margin-bottom:8px; background:#fff;">
+                    <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&amp;fit=crop&amp;w=700&amp;q=80" style="width:50px; height:50px; border-radius:8px; object-fit:cover;">
+                    <div style="flex:1; min-width:0;">
+                        <div style="font-size:12px; font-weight:800; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Custom Couple Name Embroidered Bridal Chunri ('सदा सौभाग्यवती भवः')</div>
+                        <div style="font-size:12px; color:var(--royal); font-weight:700;">₹899</div>
+                    </div>
+                    <div style="display:flex; gap:6px;">
+                        <button class="f-pill" style="background:#DBEAFE; color:#1E40AF; border:none;" onclick="loadProductIntoAdmin(2)">Edit</button>
+                        <button class="f-pill" style="background:#FEE2E2; color:#991B1B; border:none;" onclick="removeProductFromAdmin(2)">Del</button>
+                    </div>
+                </div>
+            
+                <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px; border:1px solid var(--border); border-radius:10px; margin-bottom:8px; background:#fff;">
+                    <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&amp;fit=crop&amp;w=700&amp;q=80" style="width:50px; height:50px; border-radius:8px; object-fit:cover;">
+                    <div style="flex:1; min-width:0;">
+                        <div style="font-size:12px; font-weight:800; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Designer Velvet &amp; Mirror-Work Karwa Chauth Pooja Thali Set (6 Pieces)</div>
+                        <div style="font-size:12px; color:var(--royal); font-weight:700;">₹749</div>
+                    </div>
+                    <div style="display:flex; gap:6px;">
+                        <button class="f-pill" style="background:#DBEAFE; color:#1E40AF; border:none;" onclick="loadProductIntoAdmin(3)">Edit</button>
+                        <button class="f-pill" style="background:#FEE2E2; color:#991B1B; border:none;" onclick="removeProductFromAdmin(3)">Del</button>
+                    </div>
+                </div>
+            
+                <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px; border:1px solid var(--border); border-radius:10px; margin-bottom:8px; background:#fff;">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&amp;fit=crop&amp;w=700&amp;q=80" style="width:50px; height:50px; border-radius:8px; object-fit:cover;">
+                    <div style="flex:1; min-width:0;">
+                        <div style="font-size:12px; font-weight:800; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Luxury Floral &amp; Acrylic Engagement Ring Ceremony Platter with LED</div>
+                        <div style="font-size:12px; color:var(--royal); font-weight:700;">₹1499</div>
+                    </div>
+                    <div style="display:flex; gap:6px;">
+                        <button class="f-pill" style="background:#DBEAFE; color:#1E40AF; border:none;" onclick="loadProductIntoAdmin(4)">Edit</button>
+                        <button class="f-pill" style="background:#FEE2E2; color:#991B1B; border:none;" onclick="removeProductFromAdmin(4)">Del</button>
+                    </div>
+                </div>
+            
+                <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px; border:1px solid var(--border); border-radius:10px; margin-bottom:8px; background:#fff;">
+                    <img src="https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?auto=format&amp;fit=crop&amp;w=700&amp;q=80" style="width:50px; height:50px; border-radius:8px; object-fit:cover;">
+                    <div style="flex:1; min-width:0;">
+                        <div style="font-size:12px; font-weight:800; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Authentic Kutch Lippan Mud &amp; Mirror Mandala Wall Art (18 Inch)</div>
+                        <div style="font-size:12px; color:var(--royal); font-weight:700;">₹1199</div>
+                    </div>
+                    <div style="display:flex; gap:6px;">
+                        <button class="f-pill" style="background:#DBEAFE; color:#1E40AF; border:none;" onclick="loadProductIntoAdmin(5)">Edit</button>
+                        <button class="f-pill" style="background:#FEE2E2; color:#991B1B; border:none;" onclick="removeProductFromAdmin(5)">Del</button>
+                    </div>
+                </div>
+            
+                <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px; border:1px solid var(--border); border-radius:10px; margin-bottom:8px; background:#fff;">
+                    <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&amp;fit=crop&amp;w=700&amp;q=80" style="width:50px; height:50px; border-radius:8px; object-fit:cover;">
+                    <div style="flex:1; min-width:0;">
+                        <div style="font-size:12px; font-weight:800; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Hand-Embroidered Zari &amp; Mirror Work Punjabi Bridal Jootis</div>
+                        <div style="font-size:12px; color:var(--royal); font-weight:700;">₹999</div>
+                    </div>
+                    <div style="display:flex; gap:6px;">
+                        <button class="f-pill" style="background:#DBEAFE; color:#1E40AF; border:none;" onclick="loadProductIntoAdmin(6)">Edit</button>
+                        <button class="f-pill" style="background:#FEE2E2; color:#991B1B; border:none;" onclick="removeProductFromAdmin(6)">Del</button>
+                    </div>
+                </div>
+            
+                <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px; border:1px solid var(--border); border-radius:10px; margin-bottom:8px; background:#fff;">
+                    <img src="https://images.unsplash.com/photo-1611085583191-a3b181a88401?auto=format&amp;fit=crop&amp;w=700&amp;q=80" style="width:50px; height:50px; border-radius:8px; object-fit:cover;">
+                    <div style="flex:1; min-width:0;">
+                        <div style="font-size:12px; font-weight:800; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Personalized Floral &amp; Gold Foil Resin Alphabet Keychain with Tassel</div>
+                        <div style="font-size:12px; color:var(--royal); font-weight:700;">₹199</div>
+                    </div>
+                    <div style="display:flex; gap:6px;">
+                        <button class="f-pill" style="background:#DBEAFE; color:#1E40AF; border:none;" onclick="loadProductIntoAdmin(7)">Edit</button>
+                        <button class="f-pill" style="background:#FEE2E2; color:#991B1B; border:none;" onclick="removeProductFromAdmin(7)">Del</button>
+                    </div>
+                </div>
+            
+                <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px; border:1px solid var(--border); border-radius:10px; margin-bottom:8px; background:#fff;">
+                    <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&amp;fit=crop&amp;w=700&amp;q=80" style="width:50px; height:50px; border-radius:8px; object-fit:cover;">
+                    <div style="flex:1; min-width:0;">
+                        <div style="font-size:12px; font-weight:800; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Royal Bridal Trousseau Saree &amp; Suit Packing Basket Hamper</div>
+                        <div style="font-size:12px; color:var(--royal); font-weight:700;">₹649</div>
+                    </div>
+                    <div style="display:flex; gap:6px;">
+                        <button class="f-pill" style="background:#DBEAFE; color:#1E40AF; border:none;" onclick="loadProductIntoAdmin(8)">Edit</button>
+                        <button class="f-pill" style="background:#FEE2E2; color:#991B1B; border:none;" onclick="removeProductFromAdmin(8)">Del</button>
+                    </div>
+                </div>
+            
+                <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px; border:1px solid var(--border); border-radius:10px; margin-bottom:8px; background:#fff;">
+                    <img src="https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?auto=format&amp;fit=crop&amp;w=700&amp;q=80" style="width:50px; height:50px; border-radius:8px; object-fit:cover;">
+                    <div style="flex:1; min-width:0;">
+                        <div style="font-size:12px; font-weight:800; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Resin Varmala Preservation Wall Clock with Roman Numerals (14 Inch)</div>
+                        <div style="font-size:12px; color:var(--royal); font-weight:700;">₹2999</div>
+                    </div>
+                    <div style="display:flex; gap:6px;">
+                        <button class="f-pill" style="background:#DBEAFE; color:#1E40AF; border:none;" onclick="loadProductIntoAdmin(9)">Edit</button>
+                        <button class="f-pill" style="background:#FEE2E2; color:#991B1B; border:none;" onclick="removeProductFromAdmin(9)">Del</button>
+                    </div>
+                </div>
+            
+                <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px; border:1px solid var(--border); border-radius:10px; margin-bottom:8px; background:#fff;">
+                    <img src="https://images.unsplash.com/photo-1583391733958-d15f07011f38?auto=format&amp;fit=crop&amp;w=700&amp;q=80" style="width:50px; height:50px; border-radius:8px; object-fit:cover;">
+                    <div style="flex:1; min-width:0;">
+                        <div style="font-size:12px; font-weight:800; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Handcrafted Haldi &amp; Mehndi Floral Platter Set with Bowl &amp; Kalire</div>
+                        <div style="font-size:12px; color:var(--royal); font-weight:700;">₹849</div>
+                    </div>
+                    <div style="display:flex; gap:6px;">
+                        <button class="f-pill" style="background:#DBEAFE; color:#1E40AF; border:none;" onclick="loadProductIntoAdmin(10)">Edit</button>
+                        <button class="f-pill" style="background:#FEE2E2; color:#991B1B; border:none;" onclick="removeProductFromAdmin(10)">Del</button>
+                    </div>
+                </div>
+            </div>
+                </div>
+
+                <!-- Admin Tab 3: Store Settings -->
+                <div id="adm-tab-set" style="display: block;">
+                    <div style="background:#F9FAFB; padding:14px; border-radius:12px; border:1px solid var(--border);">
+                        <div class="inp-group">
+                            <label>Official Shop WhatsApp Number (with 91, no +)</label>
+                            <input type="text" id="as-wa" placeholder="919876543210">
+                        </div>
+                        <div class="inp-group">
+                            <label>Top Announcement Promo Banner</label>
+                            <input type="text" id="as-promo">
+                        </div>
+                        <div class="inp-group">
+                            <label>Change Owner Admin Password</label>
+                            <input type="text" id="as-pass">
+                        </div>
+                        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                            <button class="btn-primary" style="background:var(--royal); color:#fff; padding:10px 16px;" onclick="saveOwnerSettings()">Save Settings to Cloud</button>
+                            <button class="f-pill" style="color:var(--danger); border-color:var(--danger);" onclick="restoreDefaultCatalog()">Reset Store to Original Catalog</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-pop" id="toast-box" style="display: none;"><i class="fa-solid fa-circle-check" style="color:var(--gold-bright);"></i><span id="toast-text">Live on Cloud for All Customers ✓</span></div>
+
+    <!-- ================= STORE DATA BLOCK ================= -->
+    <script id="store-database">
+        const DEFAULT_STORE_CONFIG = {
+    "whatsapp": "918318521927",
+    "promo": "Use Code PRATIBHA10 for 10% OFF | Free Store Pickup at Vijay Chowk, Pipraich!",
+    "password": "artisticarmour"
+};
+
+        const DEFAULT_STORE_PRODUCTS = [
+    {
+        "id": 1,
+        "title": "Royal 3D Resin Varmala Preservation Frame with Couple Name & Gold Flakes",
+        "category": "Varmala",
+        "price": 2499,
+        "mrp": 3999,
+        "rating": 4.9,
+        "reviewsCount": 164,
+        "badge": "Bestseller",
+        "customizable": true,
+        "sizes": [
+            "8x8 Inch Square",
+            "12x12 Inch Royal",
+            "16x16 Inch Museum"
+        ],
+        "material": "UV-Resistant Crystal Epoxy Resin & Teak Frame",
+        "prepTime": "5 - 7 Days (Scientific Silica Drying)",
+        "img": "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=700&q=80",
+        "desc": "Immortalize your sacred wedding jaimala forever! We scientifically dehydrate your fresh wedding flowers to retain their natural color and cast them in multi-layer crystal-clear UV-resistant epoxy resin with metallic gold leaf and custom acrylic couple names."
+    },
+    {
+        "id": 2,
+        "title": "Custom Couple Name Embroidered Bridal Chunri ('सदा सौभाग्यवती भवः')",
+        "category": "Chunri",
+        "price": 899,
+        "mrp": 1499,
+        "rating": 4.9,
+        "reviewsCount": 218,
+        "badge": "Bridal Hit",
+        "customizable": true,
+        "sizes": [
+            "2.25 Meter Full Bridal",
+            "2.5 Meter Heavy Border"
+        ],
+        "material": "Soft Bridal Net with Zari & Gota Patti Work",
+        "prepTime": "2 - 3 Days",
+        "img": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=700&q=80",
+        "desc": "Handcrafted crimson red bridal Sohag Chunri featuring heavy golden gota-patti borders, kiran lace, and customized bride & groom name embroidery in Hindi or English."
+    },
+    {
+        "id": 3,
+        "title": "Designer Velvet & Mirror-Work Karwa Chauth Pooja Thali Set (6 Pieces)",
+        "category": "Thali",
+        "price": 749,
+        "mrp": 1299,
+        "rating": 4.8,
+        "reviewsCount": 189,
+        "badge": "Festive Deal",
+        "customizable": true,
+        "sizes": [
+            "Red Velvet Set",
+            "Royal Maroon Set",
+            "Rani Pink Set"
+        ],
+        "material": "Steel Base with Velvet, Pearls & Kundan Work",
+        "prepTime": "Ready to Ship / Same Day Pickup",
+        "img": "https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=700&q=80",
+        "desc": "Complete 6-piece hand-decorated Karwa Chauth & Ahoi Ashtami thali set including 12-inch thali, decorated channi (sieve), kalash lota, diya, sindoor/roli dabbi, and matching bridal potli bag."
+    },
+    {
+        "id": 4,
+        "title": "Luxury Floral & Acrylic Engagement Ring Ceremony Platter with LED",
+        "category": "Platters",
+        "price": 1499,
+        "mrp": 2299,
+        "rating": 4.8,
+        "reviewsCount": 94,
+        "badge": "Trending",
+        "customizable": true,
+        "sizes": [
+            "Standard Dual Ring",
+            "Rotating Lotus Platter",
+            "With Warm Fairy LED"
+        ],
+        "material": "Imported Acrylic, Foam Roses & Pearl Work",
+        "prepTime": "2 - 3 Days",
+        "img": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=700&q=80",
+        "desc": "Make your ring exchange unforgettable with our bespoke engagement ring tray featuring laser-cut golden couple initials, imported velvet roses, pearl handles, and dual ring holders."
+    },
+    {
+        "id": 5,
+        "title": "Authentic Kutch Lippan Mud & Mirror Mandala Wall Art (18 Inch)",
+        "category": "Lippan",
+        "price": 1199,
+        "mrp": 1899,
+        "rating": 4.9,
+        "reviewsCount": 76,
+        "badge": "Handmade",
+        "customizable": true,
+        "sizes": [
+            "12 Inch Round",
+            "18 Inch Round",
+            "24 Inch Statement"
+        ],
+        "material": "Waterproof MDF Board, Shilpkar Clay & Cut Mirrors",
+        "prepTime": "3 - 4 Days",
+        "img": "https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?auto=format&fit=crop&w=700&q=80",
+        "desc": "Intricately handcrafted traditional Kutch Lippan Kaam wall centerpiece with geometric mirror work that reflects warm ambient light—perfect for living rooms and entrance foyers."
+    },
+    {
+        "id": 6,
+        "title": "Hand-Embroidered Zari & Mirror Work Punjabi Bridal Jootis",
+        "category": "Jootis",
+        "price": 999,
+        "mrp": 1599,
+        "rating": 4.8,
+        "reviewsCount": 145,
+        "badge": "New Arrival",
+        "customizable": false,
+        "sizes": [
+            "Size 36 (UK 3)",
+            "Size 37 (UK 4)",
+            "Size 38 (UK 5)",
+            "Size 39 (UK 6)",
+            "Size 40 (UK 7)"
+        ],
+        "material": "Double-Cushioned Leatherette, Zari, Dabka & Beads",
+        "prepTime": "Ready Stock at Pipraich",
+        "img": "https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=700&q=80",
+        "desc": "Bite-free, double-padded artisanal Punjabi jootis crafted with royal golden zari, mirror work, and pearl embellishments. Looks stunning with bridal lehengas as well as Gen-Z denim fusion wear!"
+    },
+    {
+        "id": 7,
+        "title": "Personalized Floral & Gold Foil Resin Alphabet Keychain with Tassel",
+        "category": "Resin",
+        "price": 199,
+        "mrp": 349,
+        "rating": 4.7,
+        "reviewsCount": 312,
+        "badge": "Pocket Friendly",
+        "customizable": true,
+        "sizes": [
+            "Single Letter (A-Z)",
+            "With Custom Name Vinyl",
+            "Combo Pack of 2"
+        ],
+        "material": "High-Gloss Epoxy Resin, Pressed Flowers & Brass Ring",
+        "prepTime": "1 - 2 Days",
+        "img": "https://images.unsplash.com/photo-1611085583191-a3b181a88401?auto=format&fit=crop&w=700&q=80",
+        "desc": "Custom-poured resin initial keyring embedded with real baby's breath flowers, 24K-look gold flakes, and a silk tassel. Best for return gifts, birthdays, and couple keepsakes."
+    },
+    {
+        "id": 8,
+        "title": "Royal Bridal Trousseau Saree & Suit Packing Basket Hamper",
+        "category": "Trousseau",
+        "price": 649,
+        "mrp": 999,
+        "rating": 4.8,
+        "reviewsCount": 68,
+        "badge": "Wedding Prep",
+        "customizable": true,
+        "sizes": [
+            "Single Saree Tray",
+            "Set of 3 Trays",
+            "Set of 5 Luxury Baskets"
+        ],
+        "material": "Pinewood / MDF Basket, Shimmer Net, Brocade & Florals",
+        "prepTime": "2 - 4 Days",
+        "img": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=700&q=80",
+        "desc": "Present your wedding gifts, bridal sarees, cosmetics, and dry fruits in royal style with our floral-draped trousseau hampers."
+    },
+    {
+        "id": 9,
+        "title": "Resin Varmala Preservation Wall Clock with Roman Numerals (14 Inch)",
+        "category": "Varmala",
+        "price": 2999,
+        "mrp": 4499,
+        "rating": 5,
+        "reviewsCount": 52,
+        "badge": "Luxury Edition",
+        "customizable": true,
+        "sizes": [
+            "12 Inch Clock",
+            "14 Inch Geode Clock",
+            "16 Inch Royal Clock"
+        ],
+        "material": "Silent Sweep Quartz Movement + Epoxy Resin",
+        "prepTime": "6 - 8 Days",
+        "img": "https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?auto=format&fit=crop&w=700&q=80",
+        "desc": "Turn your wedding Varmala petals into a functional, timeless wall clock! Features golden metallic Roman numerals, silent sweep clock machinery, and customized couple names."
+    },
+    {
+        "id": 10,
+        "title": "Handcrafted Haldi & Mehndi Floral Platter Set with Bowl & Kalire",
+        "category": "Platters",
+        "price": 849,
+        "mrp": 1399,
+        "rating": 4.8,
+        "reviewsCount": 83,
+        "badge": "Haldi Special",
+        "customizable": true,
+        "sizes": [
+            "Haldi Yellow Platter",
+            "Mehndi Green Platter",
+            "Combo Set (Both)"
+        ],
+        "material": "Marigold & Gota Patti Handwork on Acrylic Base",
+        "prepTime": "1 - 2 Days",
+        "img": "https://images.unsplash.com/photo-1583391733958-d15f07011f38?auto=format&fit=crop&w=700&q=80",
+        "desc": "Vibrant yellow and emerald green ceremonial platters adorned with artificial marigold, shells, gota flowers, and brass bowls for Haldi and Mehndi rituals."
+    }
+];
+    </script>
+
+    <!-- ================= FIREBASE CLOUD SYNC ENGINE ================= -->
+    <script>
+        const FIREBASE_DB_URL = "https://pratibhashop-default-rtdb.firebaseio.com/";
+
+        const CATEGORIES_META = [
+            { id: "All", name: "All Items", img: "https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=200&q=80" },
+            { id: "Varmala", name: "Varmala Resin", img: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=200&q=80" },
+            { id: "Chunri", name: "Name Chunri", img: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=200&q=80" },
+            { id: "Thali", name: "Pooja Thali", img: "https://images.unsplash.com/photo-1583391733958-d15f07011f38?auto=format&fit=crop&w=200&q=80" },
+            { id: "Platters", name: "Ring Platters", img: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=200&q=80" },
+            { id: "Lippan", name: "Lippan Art", img: "https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?auto=format&fit=crop&w=200&q=80" },
+            { id: "Resin", name: "Resin Gifts", img: "https://images.unsplash.com/photo-1611085583191-a3b181a88401?auto=format&fit=crop&w=200&q=80" },
+            { id: "Trousseau", name: "Trousseau", img: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=200&q=80" },
+            { id: "Jootis", name: "Bridal Jootis", img: "https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=200&q=80" }
+        ];
+
+        let storeConfig = JSON.parse(localStorage.getItem('ph_cfg')) || DEFAULT_STORE_CONFIG;
+        let catalog = JSON.parse(localStorage.getItem('ph_prod')) || DEFAULT_STORE_PRODUCTS;
+        let cart = JSON.parse(localStorage.getItem('ph_cart')) || [];
+        let wishlist = JSON.parse(localStorage.getItem('ph_wish')) || [];
+        let orders = JSON.parse(localStorage.getItem('ph_ords')) || [];
+        let reviewsDB = JSON.parse(localStorage.getItem('ph_revs')) || {
+            1: [{ user: "Ananya Mishra (Gorakhpur)", stars: 5, text: "Meri shadi ki varmala bilkul fresh jaisi preserve hui hai! Best work in Pipraich." }]
+        };
+
+        let activeCat = "All";
+        let activePriceFilter = "all";
+        let searchKey = "";
+        let activeCoupon = null;
+        let currentModalProductId = null;
+        let selectedVariantIndex = 0;
+        let currentSlide = 0;
+
+        async function initApp() {
+            renderCategoryCircles();
+            renderCatalog();
+            updateHeaderCounts();
+            startHeroCarousel();
+            startDealCountdown();
+            await fetchFromCloud();
+            document.getElementById('top-promo-text').innerText = storeConfig.promo;
+            renderCatalog();
+        }
+
+        // Firebase Cloud Fetch & Sync
+        async function fetchFromCloud() {
+            try {
+                const res = await fetch(FIREBASE_DB_URL + "storeData.json");
+                const data = await res.json();
+                if (data) {
+                    if (data.config) storeConfig = data.config;
+                    if (data.products && Array.isArray(data.products)) catalog = data.products;
+                    if (data.reviews) reviewsDB = data.reviews;
+                    localStorage.setItem('ph_cfg', JSON.stringify(storeConfig));
+                    localStorage.setItem('ph_prod', JSON.stringify(catalog));
+                }
+            } catch (err) {
+                console.log("Using local cache");
+            }
+        }
+
+        async function syncToCloudNow() {
+            notify("Syncing to Firebase Cloud...");
+            try {
+                await fetch(FIREBASE_DB_URL + "storeData.json", {
+                    method: "PUT",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        config: storeConfig,
+                        products: catalog,
+                        reviews: reviewsDB
+                    })
+                });
+                notify("Live on Cloud for All Customers ✓");
+            } catch (err) {
+                notify("Saved locally (Check Firebase Rules)");
+            }
+        }
+
+        function saveStateLocally() {
+            localStorage.setItem('ph_cfg', JSON.stringify(storeConfig));
+            localStorage.setItem('ph_prod', JSON.stringify(catalog));
+            localStorage.setItem('ph_cart', JSON.stringify(cart));
+            localStorage.setItem('ph_wish', JSON.stringify(wishlist));
+            localStorage.setItem('ph_ords', JSON.stringify(orders));
+            localStorage.setItem('ph_revs', JSON.stringify(reviewsDB));
+            updateHeaderCounts();
+        }
+
+        function notify(msg) {
+            const box = document.getElementById('toast-box');
+            document.getElementById('toast-text').innerText = msg;
+            box.style.display = 'flex';
+            clearTimeout(window.tTimer);
+            window.tTimer = setTimeout(() => { box.style.display = 'none'; }, 2600);
+        }
+
+        // Hero Slider & Countdown
+        function goSlide(idx) {
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+            slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+            dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+            currentSlide = idx;
+        }
+        function startHeroCarousel() {
+            setInterval(() => { goSlide((currentSlide + 1) % 3); }, 4500);
+        }
+        function startDealCountdown() {
+            let secs = 6 * 3600 + 42 * 60 + 18;
+            setInterval(() => {
+                secs = secs > 0 ? secs - 1 : 21600;
+                const h = String(Math.floor(secs / 3600)).padStart(2, '0');
+                const m = String(Math.floor((secs % 3600) / 60)).padStart(2, '0');
+                const s = String(secs % 60).padStart(2, '0');
+                const el = document.getElementById('deal-timer');
+                if (el) el.innerText = h + ":" + m + ":" + s;
+            }, 1000);
+        }
+
+        function renderCategoryCircles() {
+            const wrap = document.getElementById('cat-circles-list');
+            wrap.innerHTML = CATEGORIES_META.map(c => `
+                <div class="cat-circle-item ${activeCat === c.id ? 'active' : ''}" onclick="selectCategory('${c.id}')">
+                    <div class="cat-ring"><img src="${c.img}" alt="${c.name}"></div>
+                    <span>${c.name}</span>
+                </div>
+            `).join('');
+        }
+
+        function selectCategory(catId) {
+            activeCat = catId;
+            renderCategoryCircles();
+            renderCatalog();
+        }
+
+        function setPriceFilter(mode, btn) {
+            activePriceFilter = mode;
+            document.querySelectorAll('.filter-pills .f-pill').forEach(b => b.classList.remove('active'));
+            if (btn) btn.classList.add('active');
+            renderCatalog();
+        }
+
+        function filterByTag(tag) {
+            activeCat = "All";
+            searchKey = tag.toLowerCase();
+            renderCategoryCircles();
+            renderCatalog();
+            document.getElementById('catalog-anchor').scrollIntoView();
+        }
+
+        function resetAllFilters() {
+            activeCat = "All";
+            activePriceFilter = "all";
+            searchKey = "";
+            document.getElementById('inp-search-desk').value = "";
+            document.getElementById('inp-search-mob').value = "";
+            document.querySelectorAll('.filter-pills .f-pill').forEach((b, i) => b.classList.toggle('active', i === 0));
+            renderCategoryCircles();
+            renderCatalog();
+        }
+
+        function handleSearch(val) {
+            searchKey = val.trim().toLowerCase();
+            document.getElementById('inp-search-desk').value = val;
+            document.getElementById('inp-search-mob').value = val;
+            renderCatalog();
+
+            const sugDesk = document.getElementById('sug-desk');
+            const sugMob = document.getElementById('sug-mob');
+            if (!searchKey) { sugDesk.style.display = 'none'; sugMob.style.display = 'none'; return; }
+            const matches = catalog.filter(p => p.title.toLowerCase().includes(searchKey) || p.category.toLowerCase().includes(searchKey)).slice(0, 5);
+            const html = matches.map(m => `
+                <div class="sug-item" onclick="hideSuggestions(); openProductDetail(${m.id})">
+                    <img src="${m.img}" alt="">
+                    <div style="flex:1;">
+                        <div style="font-weight:700; font-size:12px;">${m.title}</div>
+                        <div style="font-size:11px; color:var(--royal); font-weight:800;">₹${m.price} • in ${m.category}</div>
+                    </div>
+                </div>
+            `).join('');
+            sugDesk.innerHTML = html;
+            sugMob.innerHTML = html;
+            sugDesk.style.display = matches.length ? 'block' : 'none';
+            sugMob.style.display = matches.length ? 'block' : 'none';
+        }
+
+        function hideSuggestions() {
+            document.getElementById('sug-desk').style.display = 'none';
+            document.getElementById('sug-mob').style.display = 'none';
+        }
+        function triggerSearch() { hideSuggestions(); document.getElementById('catalog-anchor').scrollIntoView(); }
+
+        function renderCatalog() {
+            const sortMode = document.getElementById('sort-select').value;
+            let filtered = catalog.filter(p => {
+                const matchCat = activeCat === "All" || p.category === activeCat;
+                const matchSearch = !searchKey || p.title.toLowerCase().includes(searchKey) || p.desc.toLowerCase().includes(searchKey) || p.category.toLowerCase().includes(searchKey) || (p.badge && p.badge.toLowerCase().includes(searchKey));
+                let matchPrice = true;
+                if (activePriceFilter === 'under500') matchPrice = p.price < 500;
+                if (activePriceFilter === '500to1000') matchPrice = p.price >= 500 && p.price <= 1000;
+                if (activePriceFilter === 'above1000') matchPrice = p.price > 1000;
+                if (activePriceFilter === 'custom') matchPrice = Boolean(p.customizable);
+                return matchCat && matchSearch && matchPrice;
+            });
+
+            if (sortMode === 'low') filtered.sort((a, b) => a.price - b.price);
+            if (sortMode === 'high') filtered.sort((a, b) => b.price - a.price);
+            if (sortMode === 'disc') filtered.sort((a, b) => ((b.mrp - b.price) / b.mrp) - ((a.mrp - a.price) / a.mrp));
+            if (sortMode === 'rating') filtered.sort((a, b) => (b.rating || 4.8) - (a.rating || 4.8));
+
+            document.getElementById('showing-count').innerText = `Showing ${filtered.length} handcrafted items`;
+            const grid = document.getElementById('product-grid');
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `<div style="grid-column:1/-1; background:#fff; border-radius:12px; padding:40px 20px; text-align:center; border:1px solid var(--border);">
+                    <i class="fa-solid fa-box-open" style="font-size:34px; color:var(--muted); margin-bottom:10px;"></i>
+                    <h4 style="font-size:15px;">No matching items found</h4>
+                    <button class="btn-primary" onclick="resetAllFilters()" style="margin-top:10px;">Reset Filters</button>
+                </div>`;
+                return;
+            }
+
+            grid.innerHTML = filtered.map(p => {
+                const off = p.mrp > p.price ? Math.round(((p.mrp - p.price) / p.mrp) * 100) : 0;
+                const wished = wishlist.includes(p.id);
+                return `
+                <div class="p-card">
+                    <div>
+                        <div class="p-img-wrap" onclick="openProductDetail(${p.id})">
+                            <img src="${p.img}" alt="${p.title}" loading="lazy">
+                            ${p.badge ? `<span class="p-badge">${p.badge}</span>` : ''}
+                            ${p.customizable ? `<span class="p-custom-tag">✍️ Customizable</span>` : ''}
+                            <button class="p-wish ${wished ? 'wished' : ''}" onclick="event.stopPropagation(); toggleWishlist(${p.id})">
+                                <i class="fa-${wished ? 'solid' : 'regular'} fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="p-info">
+                            <div class="p-brand">${p.category} • Pratibha Studio</div>
+                            <div class="p-title" onclick="openProductDetail(${p.id})">${p.title}</div>
+                            <div class="p-rating">
+                                <span class="rating-pill">${p.rating || 4.8} ★</span>
+                                <span style="color:var(--muted);">(${p.reviewsCount || 45})</span>
+                            </div>
+                            <div class="p-price-row">
+                                <span class="p-price">₹${p.price}</span>
+                                ${p.mrp > p.price ? `<span class="p-mrp">₹${p.mrp}</span><span class="p-disc">(${off}% off)</span>` : ''}
+                            </div>
+                            <div class="p-ship"><b>FREE Pickup</b> at Pipraich or Home Delivery</div>
+                        </div>
+                    </div>
+                    <div class="p-btns">
+                        <button class="btn-amz-cart" onclick="quickAddToCart(${p.id})"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        <button class="btn-quick-wa" title="WhatsApp Inquiry" onclick="instantProductWhatsApp(${p.id})"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                </div>`;
+            }).join('');
+        }
+
+        function openProductDetail(id) {
+            const p = catalog.find(x => x.id === id);
+            if (!p) return;
+            currentModalProductId = p.id;
+            selectedVariantIndex = 0;
+
+            document.getElementById('dt-cat').innerText = p.category + " COLLECTION";
+            document.getElementById('dt-img').src = p.img;
+            document.getElementById('dt-rating').innerText = `${p.rating || 4.9} ★ (${p.reviewsCount || 50} Ratings)`;
+            document.getElementById('dt-title').innerText = p.title;
+            document.getElementById('dt-desc').innerText = p.desc;
+            document.getElementById('dt-mat').innerText = p.material || "Premium Handcrafted Grade";
+            document.getElementById('dt-prep').innerText = p.prepTime || "2 - 3 Days";
+            document.getElementById('dt-custom-note').value = "";
+
+            const sizes = Array.isArray(p.sizes) && p.sizes.length ? p.sizes : ["Standard Size"];
+            document.getElementById('dt-variants').innerHTML = sizes.map((s, idx) => `
+                <button type="button" class="v-pill ${idx === 0 ? 'selected' : ''}" onclick="selectVariant(${idx})">${s}</button>
+            `).join('');
+
+            updateDetailModalPrice(p, 0);
+            renderProductModalReviews(p.id);
+            openModal('detail-modal');
+        }
+
+        function selectVariant(idx) {
+            selectedVariantIndex = idx;
+            document.querySelectorAll('#dt-variants .v-pill').forEach((b, i) => b.classList.toggle('selected', i === idx));
+            const p = catalog.find(x => x.id === currentModalProductId);
+            if (p) updateDetailModalPrice(p, idx);
+        }
+
+        function updateDetailModalPrice(p, varIdx) {
+            const addon = varIdx * (p.price >= 1500 ? 400 : 150);
+            const finalPrice = p.price + addon;
+            const finalMrp = p.mrp + addon;
+            const off = finalMrp > finalPrice ? Math.round(((finalMrp - finalPrice) / finalMrp) * 100) : 0;
+            const sizes = Array.isArray(p.sizes) && p.sizes.length ? p.sizes : ["Standard"];
+            const chosenSize = sizes[varIdx] || "Standard";
+
+            document.getElementById('dt-price').innerText = `₹${finalPrice}`;
+            document.getElementById('dt-mrp').innerText = finalMrp > finalPrice ? `M.R.P.: ₹${finalMrp}` : '';
+            document.getElementById('dt-disc').innerText = off > 0 ? `(${off}% OFF)` : '';
+
+            document.getElementById('dt-btn-cart').onclick = () => {
+                const note = document.getElementById('dt-custom-note').value.trim();
+                addItemToCart(p, finalPrice, chosenSize, note);
+                closeModal('detail-modal');
+            };
+            document.getElementById('dt-btn-buy').onclick = () => {
+                const note = document.getElementById('dt-custom-note').value.trim();
+                addItemToCart(p, finalPrice, chosenSize, note);
+                closeModal('detail-modal');
+                openModal('cart-modal');
+            };
+        }
+
+        function renderProductModalReviews(pid) {
+            const list = reviewsDB[pid] || [{ user: "Neha Tiwari (Gorakhpur)", stars: 5, text: "Superb finishing and timely delivery from Pipraich shop!" }];
+            document.getElementById('dt-reviews-list').innerHTML = list.map(r => `
+                <div style="padding:8px 0; border-bottom:1px solid #F3F4F6; font-size:12px;">
+                    <div style="display:flex; justify-content:space-between; font-weight:700;">
+                        <span>👤 ${r.user}</span>
+                        <span style="color:#F59E0B;">${"★".repeat(r.stars)}</span>
+                    </div>
+                    <p style="color:#4B5563; margin-top:3px;">${r.text}</p>
+                </div>
+            `).join('');
+        }
+
+        function submitProductReview() {
+            const u = document.getElementById('rev-user').value.trim();
+            const s = Number(document.getElementById('rev-star').value);
+            const c = document.getElementById('rev-comment').value.trim();
+            if (!u || !c) { notify("Please enter your name & review!"); return; }
+            if (!reviewsDB[currentModalProductId]) reviewsDB[currentModalProductId] = [];
+            reviewsDB[currentModalProductId].unshift({ user: u, stars: s, text: c });
+            document.getElementById('rev-user').value = "";
+            document.getElementById('rev-comment').value = "";
+            saveStateLocally();
+            syncToCloudNow();
+            renderProductModalReviews(currentModalProductId);
+            notify("Thank you! Review posted.");
+        }
+
+        function quickAddToCart(id) {
+            const p = catalog.find(x => x.id === id);
+            if (!p) return;
+            const defaultSize = (Array.isArray(p.sizes) && p.sizes[0]) ? p.sizes[0] : "Standard";
+            addItemToCart(p, p.price, defaultSize, "");
+        }
+
+        function addItemToCart(p, unitPrice, sizeLabel, customNote) {
+            const key = `${p.id}_${sizeLabel}_${customNote}`;
+            const existing = cart.find(c => c.key === key);
+            if (existing) existing.qty += 1;
+            else cart.push({ key, id: p.id, title: p.title, price: unitPrice, mrp: Math.max(p.mrp, unitPrice), img: p.img, size: sizeLabel, note: customNote, qty: 1 });
+            saveStateLocally();
+            notify("Added to Cart ✓");
+        }
+
+        function changeCartQty(idx, delta) {
+            cart[idx].qty += delta;
+            if (cart[idx].qty <= 0) cart.splice(idx, 1);
+            saveStateLocally();
+            renderCart();
+        }
+
+        function copyCoupon(code) {
+            document.getElementById('coupon-inp').value = code;
+            applyCouponCode(code);
+            notify(`Coupon ${code} applied!`);
+        }
+
+        function applyCouponCode(passedCode) {
+            const code = (passedCode || document.getElementById('coupon-inp').value).trim().toUpperCase();
+            if (code === "PRATIBHA10" || code === "SHAADI150" || code === "FREESHIP") {
+                activeCoupon = code;
+                notify(`Coupon ${code} activated!`);
+            } else {
+                activeCoupon = null;
+                notify("Invalid coupon!");
+            }
+            renderCart();
+        }
+
+        function calculateCartTotals() {
+            let totalMrp = 0, subtotal = 0;
+            cart.forEach(c => { totalMrp += (c.mrp || c.price) * c.qty; subtotal += c.price * c.qty; });
+            const prodDisc = Math.max(0, totalMrp - subtotal);
+            let cpnDisc = 0;
+            if (activeCoupon === "PRATIBHA10") cpnDisc = Math.round(subtotal * 0.10);
+            if (activeCoupon === "SHAADI150" && subtotal >= 1200) cpnDisc = 150;
+            const modeEl = document.getElementById('ord-mode');
+            const isHome = modeEl && modeEl.value.includes("Home Delivery");
+            let ship = (isHome && subtotal < 999 && activeCoupon !== "FREESHIP") ? 49 : 0;
+            const finalPayable = Math.max(0, subtotal - cpnDisc + ship);
+            return { totalMrp, subtotal, prodDisc, cpnDisc, ship, finalPayable };
+        }
+
+        function renderCart() {
+            const box = document.getElementById('cart-items-box');
+            const chkSec = document.getElementById('cart-checkout-section');
+            const count = cart.reduce((s, c) => s + c.qty, 0);
+            document.getElementById('cart-hdr-count').innerText = count;
+
+            if (cart.length === 0) {
+                box.innerHTML = `<div style="text-align:center; padding:36px 10px; color:var(--muted);"><i class="fa-solid fa-cart-arrow-down" style="font-size:38px; color:#D1D5DB; margin-bottom:10px;"></i><p style="font-size:14px; font-weight:700;">Your cart is empty</p></div>`;
+                chkSec.style.display = 'none';
+                return;
+            }
+            chkSec.style.display = 'block';
+            box.innerHTML = cart.map((c, i) => `
+                <div class="cart-row">
+                    <img src="${c.img}" alt="">
+                    <div style="flex:1;">
+                        <div style="font-size:13px; font-weight:700;">${c.title}</div>
+                        <div style="font-size:11px; color:var(--muted);">Option: <b>${c.size}</b></div>
+                        ${c.note ? `<div style="font-size:11px; color:var(--royal); font-weight:600;">✍️ "${c.note}"</div>` : ''}
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:4px;">
+                            <span style="font-size:15px; font-weight:800; color:var(--royal);">₹${c.price * c.qty}</span>
+                            <div class="qty-ctrl">
+                                <button onclick="changeCartQty(${i}, -1)">−</button>
+                                <span>${c.qty}</span>
+                                <button onclick="changeCartQty(${i}, 1)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            const bill = calculateCartTotals();
+            document.getElementById('bill-mrp').innerText = `₹${bill.totalMrp}`;
+            document.getElementById('bill-disc').innerText = `-₹${bill.prodDisc}`;
+            document.getElementById('bill-cpn-name').innerText = activeCoupon || "None";
+            document.getElementById('bill-cpn').innerText = `-₹${bill.cpnDisc}`;
+            document.getElementById('bill-ship').innerText = bill.ship === 0 ? "FREE" : `₹${bill.ship}`;
+            document.getElementById('bill-final').innerText = `₹${bill.finalPayable}`;
+        }
+
+        function completeOrder(channel) {
+            const name = document.getElementById('ord-name').value.trim();
+            const phone = document.getElementById('ord-phone').value.trim();
+            const mode = document.getElementById('ord-mode').value;
+            const addr = document.getElementById('ord-addr').value.trim();
+            const pay = document.getElementById('ord-pay').value;
+
+            if (!name || !phone || !addr) { notify("Please fill Name, Phone & Address!"); return; }
+            const bill = calculateCartTotals();
+            const orderId = "PH-" + Math.floor(100000 + Math.random() * 900000);
+            const dateStr = new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+            const newOrder = { orderId, date: dateStr, customer: name, phone, mode, addr, pay, items: [...cart], total: bill.finalPayable };
+
+            orders.unshift(newOrder);
+            saveStateLocally();
+
+            if (channel === 'whatsapp') {
+                let lines = [`Namaste *Pratibha Handicrafts*! 🙏`, `*New Order (${orderId})*`, `👤 ${name} (${phone})`, `🚚 ${mode}`, `📍 ${addr}`, ``, `*Items:*`];
+                cart.forEach((c, idx) => {
+                    lines.push(`${idx + 1}. *${c.title}* [${c.size}] x${c.qty} = ₹${c.price * c.qty}`);
+                    if (c.note) lines.push(`   _Custom Note:_ ${c.note}`);
+                });
+                lines.push(`💰 *Total: ₹${bill.finalPayable}*`);
+                window.open(`https://wa.me/${storeConfig.whatsapp}?text=${encodeURIComponent(lines.join('\n'))}`, '_blank');
+            } else {
+                downloadOrderInvoice(newOrder);
+            }
+            cart = [];
+            saveStateLocally();
+            closeModal('cart-modal');
+            openModal('orders-modal');
+            notify(`Order ${orderId} confirmed!`);
+        }
+
+        function downloadOrderInvoice(ord) {
+            const rows = ord.items.map((i, idx) => `${idx + 1}. ${i.title} (${i.size}) x${i.qty} = Rs.${i.price * i.qty}`).join('\n');
+            const receipt = ["==================", " PRATIBHA HANDICRAFTS", "==================", "Order: " + ord.orderId, "Customer: " + ord.customer, rows, "Total: Rs. " + ord.total].join('\n');
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(new Blob([receipt], { type: 'text/plain' }));
+            a.download = `Invoice_${ord.orderId}.txt`;
+            a.click();
+        }
+
+        function toggleWishlist(id) {
+            const idx = wishlist.indexOf(id);
+            if (idx > -1) { wishlist.splice(idx, 1); notify("Removed from Wishlist"); }
+            else { wishlist.push(id); notify("Saved to Wishlist ❤️"); }
+            saveStateLocally();
+            renderCatalog();
+        }
+
+        function renderWishlistModal() {
+            const box = document.getElementById('wish-items-box');
+            const list = catalog.filter(p => wishlist.includes(p.id));
+            box.innerHTML = list.length === 0 ? `<div style="text-align:center; padding:30px; color:var(--muted);">No saved items.</div>` : list.map(p => `
+                <div class="cart-row">
+                    <img src="${p.img}" alt="">
+                    <div style="flex:1;">
+                        <div style="font-size:13px; font-weight:700;">${p.title}</div>
+                        <div style="font-size:14px; font-weight:800; color:var(--royal); margin:4px 0;">₹${p.price}</div>
+                        <button class="btn-primary" style="padding:6px 12px; font-size:11px;" onclick="quickAddToCart(${p.id}); closeModal('wish-modal')">Move to Cart</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderOrdersModal() {
+            const box = document.getElementById('orders-history-box');
+            box.innerHTML = orders.length === 0 ? `<div style="text-align:center; padding:30px; color:var(--muted);">No orders yet.</div>` : orders.map(o => `
+                <div style="border:1px solid var(--border); border-radius:10px; padding:12px; margin-bottom:10px; background:#F9FAFB;">
+                    <div style="font-size:12px; font-weight:800; color:var(--royal);">Order #${o.orderId} • ${o.date}</div>
+                    <div style="font-size:12px; margin:4px 0;">${o.customer} • ₹${o.total}</div>
+                </div>
+            `).join('');
+        }
+
+        function instantProductWhatsApp(id) {
+            const p = catalog.find(x => x.id === id);
+            if (!p) return;
+            window.open(`https://wa.me/${storeConfig.whatsapp}?text=${encodeURIComponent("Inquiring about: *" + p.title + "* - ₹" + p.price)}`, '_blank');
+        }
+
+        function directWhatsAppChat() {
+            window.open(`https://wa.me/${storeConfig.whatsapp}?text=${encodeURIComponent("Namaste Pratibha Handicrafts! Inquiring about custom items.")}`, '_blank');
+        }
+
+        function submitBespokeForm(e) {
+            e.preventDefault();
+            const lines = [`Namaste *Pratibha Handicrafts*! ✨`, `*Custom Request*`, `👤 ${document.getElementById('cf-name').value}`, `🎁 ${document.getElementById('cf-cat').value}`, `✍️ ${document.getElementById('cf-text').value}`];
+            window.open(`https://wa.me/${storeConfig.whatsapp}?text=${encodeURIComponent(lines.join('\n'))}`, '_blank');
+            closeModal('custom-modal');
+        }
+
+        function updateLocation() {
+            const v = document.getElementById('pin-input').value.trim();
+            if (v) setQuickLoc("Pincode " + v);
+        }
+        function setQuickLoc(txt) { document.getElementById('active-location').innerText = "Deliver to: " + txt; closeModal('pincode-modal'); notify("Location updated!"); }
+
+        function updateHeaderCounts() {
+            const cQty = cart.reduce((s, i) => s + i.qty, 0);
+            document.getElementById('badge-cart').innerText = cQty;
+            document.getElementById('badge-cart-mob').innerText = cQty;
+            document.getElementById('badge-wish').innerText = wishlist.length;
+        }
+
+        function openModal(id) {
+            hideSuggestions();
+            if (id === 'cart-modal') renderCart();
+            if (id === 'wish-modal') renderWishlistModal();
+            if (id === 'orders-modal') renderOrdersModal();
+            document.getElementById(id).classList.add('open');
+        }
+        function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+        function bgClose(e, id) { if (e.target.id === id) closeModal(id); }
+
+        // OWNER ADMIN ENGINE (100% Cloud Synced to Firebase + HTML Exporter)
+        function openAdminAuth() {
+            document.getElementById('adm-pass-inp').value = "";
+            document.getElementById('adm-login-err').style.display = "none";
+            openModal('admin-login-modal');
+        }
+
+        function verifyAdminLogin(e) {
+            e.preventDefault();
+            if (document.getElementById('adm-pass-inp').value.trim() === storeConfig.password) {
+                closeModal('admin-login-modal');
+                document.getElementById('as-wa').value = storeConfig.whatsapp;
+                document.getElementById('as-promo').value = storeConfig.promo;
+                document.getElementById('as-pass').value = storeConfig.password;
+                renderAdminProductsList();
+                openModal('admin-panel-modal');
+            } else {
+                document.getElementById('adm-login-err').style.display = "block";
+            }
+        }
+
+        function switchAdmTab(tab) {
+            document.getElementById('adm-tab-add').style.display = tab === 'add' ? 'block' : 'none';
+            document.getElementById('adm-tab-list').style.display = tab === 'list' ? 'block' : 'none';
+            document.getElementById('adm-tab-set').style.display = tab === 'set' ? 'block' : 'none';
+            document.getElementById('atab-btn-add').classList.toggle('active', tab === 'add');
+            document.getElementById('atab-btn-list').classList.toggle('active', tab === 'list');
+            document.getElementById('atab-btn-set').classList.toggle('active', tab === 'set');
+            if (tab === 'list') renderAdminProductsList();
+        }
+
+        function compressGalleryPhoto(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+            notify("Processing photo...");
+            const reader = new FileReader();
+            reader.onload = ev => {
+                const img = new Image();
+                img.onload = () => {
+                    const canvas = document.createElement('canvas');
+                    const maxW = 550;
+                    const scale = maxW / img.width;
+                    canvas.width = maxW; canvas.height = img.height * scale;
+                    canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+                    document.getElementById('ap-img').value = canvas.toDataURL('image/jpeg', 0.72);
+                    notify("Photo ready!");
+                };
+                img.src = ev.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function saveProductFromAdmin(e) {
+            e.preventDefault();
+            const editId = document.getElementById('ap-id').value;
+            const sizesArr = document.getElementById('ap-sizes').value.split(',').map(s => s.trim()).filter(Boolean);
+            const prodObj = {
+                id: editId ? Number(editId) : Date.now(),
+                title: document.getElementById('ap-title').value.trim(),
+                price: Number(document.getElementById('ap-price').value),
+                mrp: Number(document.getElementById('ap-mrp').value),
+                category: document.getElementById('ap-cat').value,
+                badge: document.getElementById('ap-badge').value.trim(),
+                sizes: sizesArr.length ? sizesArr : ["Standard"],
+                customizable: true,
+                material: "Handcrafted Premium Studio Grade",
+                prepTime: "2 - 4 Days",
+                img: document.getElementById('ap-img').value.trim(),
+                desc: document.getElementById('ap-desc').value.trim(),
+                rating: 4.9,
+                reviewsCount: Math.floor(Math.random() * 80) + 25
+            };
+
+            if (editId) {
+                const idx = catalog.findIndex(x => x.id === Number(editId));
+                if (idx > -1) catalog[idx] = prodObj;
+            } else {
+                catalog.unshift(prodObj);
+            }
+            resetAdminProductForm();
+            saveStateLocally();
+            syncToCloudNow();
+            renderCatalog();
+            renderAdminProductsList();
+        }
+
+        function renderAdminProductsList() {
+            document.getElementById('adm-prod-count').innerText = catalog.length;
+            document.getElementById('adm-products-container').innerHTML = catalog.map(p => `
+                <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px; border:1px solid var(--border); border-radius:10px; margin-bottom:8px; background:#fff;">
+                    <img src="${p.img}" style="width:50px; height:50px; border-radius:8px; object-fit:cover;">
+                    <div style="flex:1; min-width:0;">
+                        <div style="font-size:12px; font-weight:800; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${p.title}</div>
+                        <div style="font-size:12px; color:var(--royal); font-weight:700;">₹${p.price}</div>
+                    </div>
+                    <div style="display:flex; gap:6px;">
+                        <button class="f-pill" style="background:#DBEAFE; color:#1E40AF; border:none;" onclick="loadProductIntoAdmin(${p.id})">Edit</button>
+                        <button class="f-pill" style="background:#FEE2E2; color:#991B1B; border:none;" onclick="removeProductFromAdmin(${p.id})">Del</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function loadProductIntoAdmin(id) {
+            const p = catalog.find(x => x.id === id);
+            if (!p) return;
+            switchAdmTab('add');
+            document.getElementById('ap-id').value = p.id;
+            document.getElementById('ap-title').value = p.title;
+            document.getElementById('ap-price').value = p.price;
+            document.getElementById('ap-mrp').value = p.mrp;
+            document.getElementById('ap-cat').value = p.category;
+            document.getElementById('ap-badge').value = p.badge || "";
+            document.getElementById('ap-sizes').value = (p.sizes || ["Standard"]).join(', ');
+            document.getElementById('ap-img').value = p.img;
+            document.getElementById('ap-desc').value = p.desc;
+        }
+
+        function removeProductFromAdmin(id) {
+            catalog = catalog.filter(x => x.id !== id);
+            saveStateLocally();
+            syncToCloudNow();
+            renderCatalog();
+            renderAdminProductsList();
+            notify("Product Deleted");
+        }
+
+        function resetAdminProductForm() {
+            document.getElementById('ap-id').value = "";
+            document.getElementById('ap-title').value = "";
+            document.getElementById('ap-price').value = "";
+            document.getElementById('ap-mrp').value = "";
+            document.getElementById('ap-img').value = "";
+            document.getElementById('ap-desc').value = "";
+        }
+
+        function saveOwnerSettings() {
+            storeConfig.whatsapp = document.getElementById('as-wa').value.trim() || "919876543210";
+            storeConfig.promo = document.getElementById('as-promo').value.trim();
+            storeConfig.password = document.getElementById('as-pass').value.trim() || "pratibha123";
+            document.getElementById('top-promo-text').innerText = storeConfig.promo;
+            saveStateLocally();
+            syncToCloudNow();
+            notify("Settings Saved to Cloud!");
+        }
+
+        function restoreDefaultCatalog() {
+            catalog = JSON.parse(JSON.stringify(DEFAULT_STORE_PRODUCTS));
+            storeConfig = JSON.parse(JSON.stringify(DEFAULT_STORE_CONFIG));
+            saveStateLocally();
+            syncToCloudNow();
+            renderCatalog();
+            renderAdminProductsList();
+            notify("Catalog restored!");
+        }
+
+        function exportFullStoreHTML() {
+            const dbScript = document.getElementById('store-database');
+            dbScript.textContent = "\n        const DEFAULT_STORE_CONFIG = " + JSON.stringify(storeConfig, null, 4) + ";\n\n        const DEFAULT_STORE_PRODUCTS = " + JSON.stringify(catalog, null, 4) + ";\n    ";
+            const clone = document.documentElement.cloneNode(true);
+            clone.querySelectorAll('.modal-bg').forEach(m => m.classList.remove('open'));
+            const htmlOut = "<!DOCTYPE html>\n" + clone.outerHTML;
+            const blob = new Blob([htmlOut], { type: 'text/html' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'index.html';
+            a.click();
+            notify("Downloaded updated index.html!");
+        }
+
+        window.addEventListener('DOMContentLoaded', initApp);
+    </script>
+
+</body></html>
